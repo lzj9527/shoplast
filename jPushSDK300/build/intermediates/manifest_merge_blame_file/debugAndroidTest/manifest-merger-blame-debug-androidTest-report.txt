@@ -1,0 +1,36 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.jpushdemo.test" >
+4
+5    <uses-sdk
+5-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:5:5-73
+6        android:minSdkVersion="9"
+6-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:5:15-40
+7        android:targetSdkVersion="22" />
+7-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:5:41-70
+8
+9    <instrumentation
+9-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:11:5-15:76
+10        android:name="android.test.InstrumentationTestRunner"
+10-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:11:22-75
+11        android:functionalTest="false"
+11-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:14:22-52
+12        android:handleProfiling="false"
+12-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:13:22-53
+13        android:label="Tests for com.example.jpushdemo.test"
+13-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:15:22-74
+14        android:targetPackage="com.example.jpushdemo.test" />
+14-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:12:22-72
+15
+16    <application
+16-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:7:5-9:19
+17        android:allowBackup="true"
+17-->[__tested_artifact__::jPushSDK300] D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:18-44
+18        android:debuggable="true" >
+18-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:7:18-43
+19        <uses-library android:name="android.test.runner" />
+19-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:8:9-60
+19-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7375270138113386194.xml:8:23-57
+20    </application>
+21
+22</manifest>

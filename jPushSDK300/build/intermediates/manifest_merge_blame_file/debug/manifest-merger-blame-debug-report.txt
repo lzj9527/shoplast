@@ -1,0 +1,18 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.jpushdemo"
+4    android:versionCode="300"
+5    android:versionName="3.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="9"
+8-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="22" />
+9-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\src\main\AndroidManifest.xml
+10
+11    <application android:allowBackup="true" >
+11-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\src\main\AndroidManifest.xml:8:5-9:19
+11-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\jPushSDK300\src\main\AndroidManifest.xml:8:18-44
+12    </application>
+13
+14</manifest>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.extend.widget.ExtendLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#80ffffff"
+    android:orientation="horizontal"
+    android:padding="3dp">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.extend.widget.ExtendLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/detail_edittext_hint"
+        android:orientation="horizontal" >
+    <include
+        android:id="@+id/details_middle_layout"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="7"
+        layout="@layout/product_details_middle_layout"
+        android:background="@color/detail_edittext_hint"
+
+        android:visibility="visible" />
+    <include
+        android:id="@+id/details_right_layout"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        layout="@layout/product_details_right_layout"
+        android:background="@color/detail_edittext_hint"
+        android:visibility="visible"></include>
+        <include
+            android:id="@+id/couple_details_right_layout"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            layout="@layout/couple_rings_details_right_layout"
+            android:background="@color/detail_edittext_hint"
+            android:visibility="gone"></include>
+    <FrameLayout
+        android:id="@+id/fragment_container6"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:visibility="gone"
+        android:clipChildren="false" >
+    </FrameLayout>
+    </android.extend.widget.ExtendLinearLayout>/
+    <android.extend.widget.FragmentContainer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/product_HadGia"></android.extend.widget.FragmentContainer>
+</FrameLayout>
+</android.extend.widget.ExtendLinearLayout>
