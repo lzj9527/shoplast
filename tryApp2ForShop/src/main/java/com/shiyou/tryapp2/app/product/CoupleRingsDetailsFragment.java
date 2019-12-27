@@ -166,7 +166,7 @@ public class CoupleRingsDetailsFragment extends BaseFragment
 		mLayoutResID = ResourceUtil.getLayoutId(getContext(), "couple_rings_details_right_layout");
 		mDetailRightLayout = super.onCreateView(inflater, container, savedInstanceState);
 
-		replace(getActivity(),ResourceUtil.getId(getContext(),"product_couple_details_attribute"),new MainWebFragment(url,0),false);
+		replace(getActivity(),ResourceUtil.getId(getContext(),"product_couple_details_attribute"),new MainWebFragment(url,1),false);
 
 		((android.extend.widget.ExtendLinearLayout)mDetailRightLayout).setInterceptTouchEventToDownward(true);
 		ViewTools.adapterAllViewMarginInChildren(mDetailRightLayout, MainActivity.scaled);

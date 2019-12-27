@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,8 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.webkit.WebView;
 import android.webkit.WebViewFragment;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.shiyou.tryapp2.Config;
@@ -69,11 +72,21 @@ public class LoginFragment extends BaseFragment {
 		ViewTools.adapterAllViewPaddingInChildren(view, MainActivity.scaled);
 		ViewTools.adapterAllTextViewTextSizeInChildren(view, MainActivity.fontScaled);
 
-		// int id = ResourceUtil.getId(getContext(), "login_box");
-		// View login_box = view.findViewById(id);
+		DisplayMetrics metric = new DisplayMetrics();
+		getActivity().getWindowManager().getDefaultDisplay().getMetrics(metric);
+		// 屏幕宽度（像素）
+		int width = metric.widthPixels;
+		// 屏幕高度（像素）
+		int height = metric.heightPixels;
+		 int id = ResourceUtil.getId(getContext(), "login_box");
+		 View login_box = view.findViewById(id);
+		FrameLayout.LayoutParams params=new FrameLayout.LayoutParams((int)(width/2+0.5f),(int)(height*4/5+0.5f));
+		params.setMargins((int)(width/4+0.5f),(int)(height/10+0.5f),(int)(width/4+0.5f),0);
+		login_box.setPadding((int)(width/20+0.5f),(int)(height*4/50+0.5f),(int)(width/20+0.5f),(int)(height*4/50+0.5f));
+		login_box.setLayoutParams(params);
 		// ViewTools.adapterViewSize(login_box, MainActivity.scaled);
 
-		int id = ResourceUtil.getId(getContext(), "edit_user");
+		id = ResourceUtil.getId(getContext(), "edit_user");
 		edit_user = (EditText) view.findViewById(id);
 		edit_user.setText(LoginHelper.getUserName(getContext()));
 

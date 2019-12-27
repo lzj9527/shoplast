@@ -29,6 +29,8 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
@@ -66,6 +68,8 @@ import okhttp3.Response;
 
 public class OtherIndexFragment extends BaseFragment
 {
+	public static  OtherIndexFragment instance=null;
+	public static boolean back;
 	private BaseGridAdapter<AbsAdapterItem> mAdapter;
 	private Button product_search;
 	private TextView product_all_number;
@@ -82,6 +86,9 @@ public class OtherIndexFragment extends BaseFragment
 	private ImageView duijie;
 	private ImageView erding;
 	private ImageView taoxi;
+	private ExtendImageView dzbj;
+	private FrameLayout dzbk1;
+	private HorizontalScrollView dzbk2;
 	private ExtendImageView background;
 	ShopLogoAndADResponse mShopLogoAndADResponse;
 	BannerADListResponse mBannerADListResponse;
@@ -107,13 +114,21 @@ public class OtherIndexFragment extends BaseFragment
 		}
 	};
 
-	@Override
+
+
+
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
 	{
+		back=true;
 		mLayoutResID = ResourceUtil.getLayoutId(getActivity(), "other_index_layout");
 		View view = super.onCreateView(inflater, container, savedInstanceState);
-		((android.extend.widget.ExtendLinearLayout)view).setInterceptTouchEventToDownward(true);
-
+		((android.extend.widget.ExtendFrameLayout)view).setInterceptTouchEventToDownward(true);
+		DisplayMetrics metric = new DisplayMetrics();
+		getActivity().getWindowManager().getDefaultDisplay().getMetrics(metric);
+		// 屏幕宽度（像素）
+		int width = metric.widthPixels;
+		// 屏幕高度（像素）
+		int height = metric.heightPixels;
 		int id = ResourceUtil.getId(getContext(), "index_container");
 		ScrollGridView index_container = (ScrollGridView)view.findViewById(id);
 		index_container.setNumColumns(3);
@@ -127,15 +142,30 @@ public class OtherIndexFragment extends BaseFragment
 		id=ResourceUtil.getId(getContext(),"product_search");
 		product_search= (Button)view.findViewById(id);
 
+		id=ResourceUtil.getId(getContext(),"dzbk1");
+		dzbk1= (FrameLayout) view.findViewById(id);
+		FrameLayout.LayoutParams ban1= new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,(int)(height*5/7+0.5f));
+		dzbk1.setLayoutParams(ban1);
+		dzbk1.setPadding((int)(width/80+0.5f),(int)(height/40+0.5f),(int)(width/80+0.5f),0);
+
+		id=ResourceUtil.getId(getContext(),"dzbk2");
+		dzbk2= (HorizontalScrollView) view.findViewById(id);
+		FrameLayout.LayoutParams ban2= new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,(int)(height*2/7+0.5f));
+		ban2.setMargins(0,(int)(height*5/7+0.5f),0,0);
+		dzbk2.setLayoutParams(ban2);
+		dzbk2.setPadding(0,(int)(height*3/70+0.5f),0,(int)(height*3/70+0.5f));
+
+
 		id=ResourceUtil.getId(getContext(),"background");
 		background= (ExtendImageView) view.findViewById(id);
 
-		DisplayMetrics metric = new DisplayMetrics();
-		getActivity().getWindowManager().getDefaultDisplay().getMetrics(metric);
-		// 屏幕宽度（像素）
-		int width = metric.widthPixels;
-		// 屏幕高度（像素）
-		int height = metric.heightPixels;
+		id=ResourceUtil.getId(getContext(),"dzbj");
+		dzbj= (ExtendImageView) view.findViewById(id);
+
+		id = ResourceUtil.getId(getActivity(), "dot_container2");
+		mDotContainer = (LinearLayout)view.findViewById(id);
+
+
 		LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(width/5,LayoutParams.MATCH_PARENT);
 		id=ResourceUtil.getId(getContext(),"nvjie");
 		nvjie= (ImageView) view.findViewById(id);
@@ -164,54 +194,80 @@ public class OtherIndexFragment extends BaseFragment
 		shoulian.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+back=false;
 				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(29), false,"spot",String.valueOf(29),1), false);
 			}
 		});
 		nvjie.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				back=false;
 				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(12), false,"spot",String.valueOf(12),1), false);
 			}
 		});
 		kelajie.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				back=false;
 				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(25), false,"spot",String.valueOf(25),1), false);
 			}
 		});
 		duijie.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				back=false;
 				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(16), false,"spot",String.valueOf(16),1), false);
 			}
 		});
 		erding.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				back=false;
 				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(19), false,"spot",String.valueOf(19),1), false);
 			}
 		});
 		nanjie.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				back=false;
 				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(15), false,"spot",String.valueOf(15),1), false);
 			}
 		});
 		diaozhui.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				back=false;
 				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(21), false,"spot",String.valueOf(29),1), false);
 			}
 		});
 		taoxi.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				back=false;
 				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(29), false,"spot",String.valueOf(34),1), false);
 			}
 		});
 
+//		id = ResourceUtil.getId(getActivity(), "middle_back");
+//		View middle_back = view.findViewById(id);
+//		FrameLayout.LayoutParams back= new FrameLayout.LayoutParams((int)(width/25+0.5f),(int)(height*3/28+0.5f));
+//		back.setMargins(0,(int)(height/4+0.5f),0,0);
+//		middle_back.setLayoutParams(back);
+//		middle_back.setOnClickListener(new View.OnClickListener()
+//		{
+//			@Override
+//			public void onClick(View v)
+//			{
+//				if (AndroidUtils.isFastClick())
+//					return;
+//				onBackPressed();
+//
+//			}
+//		});
+
 		id= ResourceUtil.getId(getActivity(), "viewpager2");
 		mViewPager = (ViewPager)view.findViewById(id);
+		mViewPager.setVisibility(View.VISIBLE);
 		mPagerAdapter = new BasePagerAdapter<AbsAdapterItem>();
 		mViewPager.setAdapter(mPagerAdapter);
 		mViewPager.addOnPageChangeListener(mPageChangeListener);
@@ -256,8 +312,9 @@ public class OtherIndexFragment extends BaseFragment
 		id=ResourceUtil.getId(getContext(),"product_all_number");
 		product_all_number=(TextView) view.findViewById(id);
 		changeNumber();
-		loadGoodsCategory();
+		loadShopLogoAndAD();
 		ensureBackground();
+		ensureBackground2();
 		return view;
 	}
 
@@ -277,11 +334,53 @@ public class OtherIndexFragment extends BaseFragment
 					@Override
 					public void run() {
 						int start=json.indexOf("spot");
-						int end=json.lastIndexOf("quick");
-						String jpg=json.substring(start+7,end-3).replace("\\/","/");
-						background.setImageDataSource(jpg,
-								0, DecodeMode.FIX_XY);
-						background.startImageLoad(false);
+						int end=json.indexOf("quick");
+//						boolean a=jpg.("Token")==-1;
+						if(start!=-1&end!=-1) {
+							String jpg=json.substring(start+7,end-3).replace("\\/","/");
+							dzbj.setImageDataSource(jpg.replaceAll("\\/","/"),
+									0, DecodeMode.FIX_XY);
+							dzbj.startImageLoad(false);
+
+						}else{
+							dzbj.setImageDataSource("https://images.i888vip.com/R7iR4GUtiGg4rf0B.jpg",
+									0, DecodeMode.FIX_XY);
+							dzbj.startImageLoad(false);
+						}
+					}
+				});
+			}
+		});
+	}
+
+
+	private void ensureBackground2(){
+		Request request=new Request.Builder().url("https://api.i888vip.com/swipers/list?token="+ Config.token).addHeader("accept","application/vnd.zltech.shop.v1+json").get().build();
+		OkHttpClient okHttpClient=new OkHttpClient();
+		okHttpClient.newCall(request).enqueue(new Callback() {
+			@Override
+			public void onFailure(Call call, IOException e) {
+				showToast("没有背景");
+			}
+
+			@Override
+			public void onResponse(Call call, Response response) throws IOException {
+				final  String json=response.body().string();
+				AndroidUtils.MainHandler.post(new Runnable() {
+					@Override
+					public void run() {
+						int start=json.indexOf("thumb");
+						int end=json.indexOf("goods_id");
+						if(start!=-1&end!=-1) {
+							String jpg = json.substring(start + 8, end - 3).replace("\\/", "/");
+							background.setImageDataSource(jpg,
+									0, DecodeMode.FIX_XY);
+							background.startImageLoad(false);
+						}else{
+							background.setImageDataSource("https://images.i888vip.com/R7iR4GUtiGg4rf0B.jpg",
+									0, DecodeMode.FIX_XY);
+							background.startImageLoad(false);
+						}
 //						Request request1=new Request.Builder().url(url).build();
 //						OkHttpClient okHttpClient1=new OkHttpClient();
 //						okHttpClient.newCall(request).enqueue(new Callback() {
@@ -411,7 +510,8 @@ public class OtherIndexFragment extends BaseFragment
 				JsonParser jsonParser=new JsonParser();
 				beans=new ArrayList<>();
 				jsonArray=new JsonArray();
-				jsonArray = jsonParser.parse(json).getAsJsonArray();
+				int i=json.lastIndexOf("}");
+				jsonArray = jsonParser.parse(json.substring(17,i)).getAsJsonArray();
 				for (JsonElement user : jsonArray) {
 					//使用GSON，直接转成Bean对象
 					ShopLogoAndADResponse shopLogoAndADResponse = gson.fromJson(user, ShopLogoAndADResponse.class);
@@ -440,25 +540,27 @@ public class OtherIndexFragment extends BaseFragment
 //		}
 //		if (mShopLogoAndADResponse != null && mShopLogoAndADResponse.data != null
 //				 && jsonArray.get(i).thumb != null) {
-		for (int i=0;i<jsonArray.size();i++) {
+		if(jsonArray!=null) {
+			for (int i = 0; i < jsonArray.size(); i++) {
 //				if (!TextUtils.isEmpty(beans.get(i).goodsid)) {
 //				if (!mShopLogoAndADResponse.data.goodsid.equals("0"))
 //					mPagerAdapter.addItem(new AdvertisementPagerAdapterItem(mShopLogoAndADResponse.data.,
 //							mShopLogoAndADResponse.data.goodsid, mShopLogoAndADResponse.data.tag, true,mShopLogoAndADResponse.data.link));
 //				else
 
-			ImageInfo imageInfo = new ImageInfo();
-			imageInfo.url =beans.get(i).thumb;
-			if(beans.get(i).goodsid!=null){
-				mPagerAdapter.addItem(new OtherIndexFragment.AdvertisementPagerAdapterItem(imageInfo,
-						beans.get(i).goodsid, beans.get(i).gcate, beans.get(i).customization,beans.get(i).link));
-			}else{
-				mPagerAdapter.addItem(new OtherIndexFragment.AdvertisementPagerAdapterItem(imageInfo,
-						beans.get(i).goodsid, beans.get(i).gcate, beans.get(i).customization));
+				ImageInfo imageInfo = new ImageInfo();
+				imageInfo.url = beans.get(i).thumb;
+				if (beans.get(i).goodsid != null) {
+					mPagerAdapter.addItem(new OtherIndexFragment.AdvertisementPagerAdapterItem(imageInfo,
+							beans.get(i).goodsid, beans.get(i).gcate, beans.get(i).customization, beans.get(i).link));
+				} else {
+					mPagerAdapter.addItem(new OtherIndexFragment.AdvertisementPagerAdapterItem(imageInfo,
+							beans.get(i).goodsid, beans.get(i).gcate, beans.get(i).customization));
+				}
+
+
+				length++;
 			}
-
-
-			length++;
 		}
 //		}
 

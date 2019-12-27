@@ -12,6 +12,7 @@ import android.extend.util.LogUtil;
 import android.extend.util.ResourceUtil;
 import android.extend.util.ViewTools;
 import android.extend.widget.ExtendDialog;
+import android.extend.widget.ExtendFrameLayout;
 import android.extend.widget.ExtendImageView;
 import android.extend.widget.MenuBar;
 import android.extend.widget.MenuBar.OnMenuListener;
@@ -62,6 +63,7 @@ import com.shiyou.tryapp2.app.product.MainIndexFragment;
 import com.shiyou.tryapp2.app.product.MainWebFragment;
 import com.shiyou.tryapp2.app.product.OtherIndexFragment;
 import com.shiyou.tryapp2.app.product.ProductDetailsFragment;
+import com.shiyou.tryapp2.app.product.ProductListFragment;
 import com.shiyou.tryapp2.app.product.SettingFragment;
 import com.shiyou.tryapp2.data.response.BaseResponse;
 import com.shiyou.tryapp2.data.response.MineResponse;
@@ -89,6 +91,7 @@ public class MainFragment extends BaseFragment {
 	public static MainFragment instance = null;
 
 	private View menubar_layout;
+	private LinearLayout  menubar_layout2;
 	private MenuBar mMenuBar;
 	private ExtendImageView mLogoImageView;
 	private ShopLogoAndADResponse mShopLogoAndADResponse;
@@ -98,9 +101,18 @@ public class MainFragment extends BaseFragment {
 	private ImageView mOther;
 	private  ImageView zs4c;
 	private  ImageView px;
-	private LinearLayout mMainPage;
+	private ExtendFrameLayout mMainPage;
+	private FrameLayout bankuai1;
+	private LinearLayout bankuai2_1;
+	private LinearLayout bankuai2_2;
+	private LinearLayout bankuai2_3;
+	private LinearLayout bankuai3_1;
+	private LinearLayout bankuai3_2;
+	private LinearLayout bankuai3_3;
 	private LinearLayout mine;
 	private ExtendImageView background;
+	public ExtendImageView zhuyebeijing;
+	private  boolean ifback;
 
 	private View  setting2;
 	private ImageView mLogo;
@@ -136,6 +148,10 @@ public class MainFragment extends BaseFragment {
 		instance = this;
 	}
 
+	public void setIfback(boolean ifback) {
+		this.ifback = ifback;
+	}
+
 	public MainFragment(){}
 
 	// @Override
@@ -155,6 +171,7 @@ public class MainFragment extends BaseFragment {
 				loginFragment.getToken();
 			}
 		},720000);
+		ifback=true;
 		DisplayMetrics metric = new DisplayMetrics();
 		getActivity().getWindowManager().getDefaultDisplay().getMetrics(metric);
 		// 屏幕宽度（像素）
@@ -163,9 +180,67 @@ public class MainFragment extends BaseFragment {
 		int height = metric.heightPixels;
 		int id = ResourceUtil.getId(getContext(), "menubar_layout");
 		menubar_layout = view.findViewById(id);
-		FrameLayout.LayoutParams layoutParams4= (FrameLayout.LayoutParams) menubar_layout.getLayoutParams();
-		layoutParams4.setMargins(0,height/3,0,0);
+		FrameLayout.LayoutParams layoutParams4= new FrameLayout.LayoutParams((int)(width/25+0.5f),(int)(height*3/7+0.5f));
+		layoutParams4.setMargins(0,(int)(height/4+0.5f),0,0);
 		menubar_layout.setLayoutParams(layoutParams4);
+
+		id=ResourceUtil.getId(getContext(),"bankuai1");
+		bankuai1= (FrameLayout) view.findViewById(id);
+		FrameLayout.LayoutParams ban1= new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,(int)(height*3/7+0.5f));
+		ban1.setMargins((int)(width/80+0.5f),(int)(width/80+0.5f),(int)(width/80+0.5f),0);
+		bankuai1.setLayoutParams(ban1);
+//		bankuai1.setPadding((int)(width/20+0.5f),(int)(height/40+0.5f),(int)(width/20+0.5f),0);
+
+		id=ResourceUtil.getId(getContext(),"bankuai2-1");
+		bankuai2_1= (LinearLayout) view.findViewById(id);
+		FrameLayout.LayoutParams ban2_1= new FrameLayout.LayoutParams((int)(width/7+0.5f),(int)(height*2/7+0.5f));
+		ban2_1.setMargins((int)(width/7+0.5f),(int)(height*3/7+0.5f),0,0);
+		bankuai2_1.setLayoutParams(ban2_1);
+		bankuai2_1.setPadding((int)(width/40+0.5f),(int)(height*4/70+0.5f),(int)(width/40+0.5f),(int)(height*3/70+0.5f));
+
+		id=ResourceUtil.getId(getContext(),"bankuai2-2");
+		bankuai2_2= (LinearLayout) view.findViewById(id);
+		FrameLayout.LayoutParams ban2_2= new FrameLayout.LayoutParams((int)(width/7+0.5f),(int)(height*2/7+0.5f));
+		ban2_2.setMargins((int)(width/7*3+0.5f),(int)(height*3/7+0.5f),0,0);
+		bankuai2_2.setLayoutParams(ban2_2);
+		bankuai2_2.setPadding(0,(int)(height*4/70+0.5f),0,(int)(height*3/70+0.5f));
+
+		id=ResourceUtil.getId(getContext(),"bankuai2-3");
+		bankuai2_3= (LinearLayout) view.findViewById(id);
+		FrameLayout.LayoutParams ban2_3= new FrameLayout.LayoutParams((int)(width/7+0.5f),(int)(height*2/7+0.5f));
+		ban2_3.setMargins((int)(width/7*5+0.5f),(int)(height*3/7+0.5f),0,0);
+		bankuai2_3.setLayoutParams(ban2_3);
+		bankuai2_3.setPadding(0,(int)(height*4/70+0.5f),0,(int)(height*3/70+0.5f));
+
+		id=ResourceUtil.getId(getContext(),"bankuai3-1");
+		bankuai3_1= (LinearLayout) view.findViewById(id);
+		FrameLayout.LayoutParams ban3_1= new FrameLayout.LayoutParams((int)(width/7+0.5f),(int)(height*2/7+0.5f));
+		ban3_1.setMargins((int)(width/7+0.5f),(int)(height*5/7+0.5f),0,0);
+		bankuai3_1.setLayoutParams(ban3_1);
+		bankuai3_1.setPadding(0,(int)(height*3/70+0.5f),0,(int)(height*5/70+0.5f));
+
+		id=ResourceUtil.getId(getContext(),"bankuai3-2");
+		bankuai3_2= (LinearLayout) view.findViewById(id);
+		FrameLayout.LayoutParams ban3_2= new FrameLayout.LayoutParams((int)(width/7+0.5f),(int)(height*2/7+0.5f));
+		ban3_2.setMargins((int)(width/7*3+0.5f),(int)(height*5/7+0.5f),0,0);
+		bankuai3_2.setLayoutParams(ban3_2);
+		bankuai3_2.setPadding(0,(int)(height*3/70+0.5f),0,(int)(height*5/70+0.5f));
+
+		id=ResourceUtil.getId(getContext(),"bankuai3-3");
+		bankuai3_3= (LinearLayout) view.findViewById(id);
+		FrameLayout.LayoutParams ban3_3= new FrameLayout.LayoutParams((int)(width/7+0.5f),(int)(height*2/7+0.5f));
+		ban3_3.setMargins((int)(width/7*5+0.5f),(int)(height*5/7+0.5f),0,0);
+		bankuai3_3.setLayoutParams(ban3_3);
+		bankuai3_3.setPadding(0,(int)(height*3/70+0.5f),0,(int)(height*4/70+0.5f));
+
+		id=ResourceUtil.getId(getContext(),"zhuyebeijing");
+		zhuyebeijing= (ExtendImageView) view.findViewById(id);
+
+		id = ResourceUtil.getId(getContext(), "menubar_layout2");
+		menubar_layout2 = (LinearLayout) view.findViewById(id);
+		FrameLayout.LayoutParams menubar2= new FrameLayout.LayoutParams((int)(width/4+0.5f),(int)(height/20+0.5f));
+		menubar2.setMargins((int)(width*29/40+0.5f),(int)(height/7*3+0.5f)-(int)(height/12+0.5f),0,0);
+		menubar_layout2.setLayoutParams(menubar2);
 
 //		id = ResourceUtil.getId(getContext(), "menu_container");
 //		ScrollGridView menu_container = (ScrollGridView)view.findViewById(id);
@@ -194,6 +269,9 @@ public class MainFragment extends BaseFragment {
 
 		id=ResourceUtil.getId(getContext(),"mine");
 		mine=(LinearLayout) view.findViewById(id);
+		FrameLayout.LayoutParams mine1= (FrameLayout.LayoutParams) mine.getLayoutParams();
+		mine1.setMargins(0,0,(int)(width/10+0.5f),0);
+		mine.setLayoutParams(mine1);
 		mine.setVisibility(View.GONE);
 
 		FrameLayout.LayoutParams params3= (FrameLayout.LayoutParams) mine.getLayoutParams();
@@ -217,9 +295,10 @@ public class MainFragment extends BaseFragment {
 		id=ResourceUtil.getId(getContext(),"background");
 		background= (ExtendImageView) view.findViewById(id);
 		ensureBackground();
+        ensureShopLogo();
 
 		id=ResourceUtil.getId(getContext(),"mainPage");
-		mMainPage= (LinearLayout) view.findViewById(id);
+		mMainPage= (ExtendFrameLayout) view.findViewById(id);
 
 
 
@@ -231,11 +310,16 @@ public class MainFragment extends BaseFragment {
 		mgia.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+
+
 				mMainPage.setVisibility(View.GONE);
 				menubar_layout.setVisibility(View.VISIBLE);
+				mine.setVisibility(View.GONE);
+				ifback=false;
 				url=Config.BasePrefix+"/addons/ewei_shop/template/pad/default/api/new-gia.html?isFromOrder=false";
             setCurrentMenu(7);
 				MainFragment.instance.addFragmentToCurrent(new MainWebFragment(url,0), false);
+
 			}
 		});
 		id=ResourceUtil.getId(getContext(),"train");
@@ -289,12 +373,12 @@ public class MainFragment extends BaseFragment {
 		zs4c.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-
+				mine.setVisibility(View.GONE);
 				mMainPage.setVisibility(View.GONE);
 				menubar_layout.setVisibility(View.VISIBLE);
 				setCurrentMenu(7);
-				url=Config.BasePrefix+"/article/1";
-
+				url="https://api.zsa888.cn/article/1";
+				ifback=false;
 				MainFragment.instance.addFragmentToCurrent(new MainWebFragment(url,0), false);
 
 			}
@@ -305,10 +389,11 @@ public class MainFragment extends BaseFragment {
 		px.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				mine.setVisibility(View.GONE);
 				mMainPage.setVisibility(View.GONE);
 				menubar_layout.setVisibility(View.VISIBLE);
-				setCurrentMenu(7);
-				url=Config.BasePrefix+"/article/2";
+				setCurrentMenu(7);ifback=false;
+				url="https://api.zsa888.cn/article/2";
 
 				MainFragment.instance.addFragmentToCurrent(new MainWebFragment(url,0), false);
 
@@ -337,6 +422,9 @@ public class MainFragment extends BaseFragment {
 //				}else {
 //					menuIndex2=menuIndex;
 //				}
+				if(menuIndex==1){
+					menuIndex=0;
+				}
 				setCurrentMenuImpl(menuIndex);
 			}
 		});
@@ -445,7 +533,7 @@ public class MainFragment extends BaseFragment {
 //			}
 //		});
 
-//		ensureShopLogo();
+
 		ensureMenu();
 
 
@@ -536,7 +624,7 @@ public class MainFragment extends BaseFragment {
 						jsonArray=new JsonArray();
 						int i=json.lastIndexOf("}");
 						String json2=json.substring(17,i);
-						jsonArray = jsonParser.parse("[{\"id\": 0,\"displayorder\": 0,\"title\": \"\\u5728\\u7ebf\\u677f\\u623f\",\"link\": \"https:\\/\\/www.i888vip.com\\/addons\\/ewei_shop\\/template\\/pad\\/default\\/shop\\/new-boardRoomList.html\",\"status\": 1}, {\"id\": 1,\"displayorder\": 0,\"title\": \"\\u57f9\\u8bad\\u8d44\\u6599\",\"link\": \"http:\\/\\/admin.i888vip.com\\/article\\/1\",\"status\": 1}, {\"id\": 2,\"displayorder\": 0,\"title\": \"\\u4f7f\\u7528\\u6559\\u7a0b\",\"link\": \"http:\\/\\/admin.i888vip.com\\/article\\/2\",\"status\": 1}]").getAsJsonArray();
+						jsonArray = jsonParser.parse(json2).getAsJsonArray();
 						LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams((int) (width/8+0.5f), (int)(height/18*(jsonArray.size()+2)+(jsonArray.size()+2)*2+0.5f));
 						mine2.setGravity(Gravity.END);
 						mine2.setBackgroundColor(Color.parseColor("#FF070707"));
@@ -563,6 +651,7 @@ public class MainFragment extends BaseFragment {
 									mMainPage.setVisibility(View.GONE);
 									menubar_layout.setVisibility(View.VISIBLE);
 									setCurrentMenu(7);
+									ifback=false;
 									mine.setVisibility(View.GONE);
 									MainFragment.instance.addFragmentToCurrent(new MainWebFragment(mineResponse.link+"?token="+Config.token,0), false);
 								}
@@ -656,13 +745,48 @@ public class MainFragment extends BaseFragment {
 //						boolean a=jpg.("Token")==-1;
 						if(start!=-1&end!=-1) {
 							String jpg=json.substring(start+7,end-3).replace("\\/","/");
+							zhuyebeijing.setImageDataSource(jpg.replaceAll("\\/","/"),
+									0, DecodeMode.FIX_XY);
+							zhuyebeijing.startImageLoad(false);
+
+						}else{
+							zhuyebeijing.setImageDataSource("https://images.i888vip.com/R7iR4GUtiGg4rf0B.jpg",
+							0, DecodeMode.FIX_XY);
+							zhuyebeijing.startImageLoad(false);
+						}
+					}
+				});
+			}
+		});
+	}
+
+	private void ensureBackground2(){
+		Request request=new Request.Builder().url("https://api.i888vip.com/swipers/list?token="+ Config.token).addHeader("accept","application/vnd.zltech.shop.v1+json").get().build();
+		OkHttpClient okHttpClient=new OkHttpClient();
+		okHttpClient.newCall(request).enqueue(new Callback() {
+			@Override
+			public void onFailure(Call call, IOException e) {
+				showToast("没有背景");
+			}
+
+			@Override
+			public void onResponse(Call call, Response response) throws IOException {
+				final  String json=response.body().string();
+				AndroidUtils.MainHandler.post(new Runnable() {
+					@Override
+					public void run() {
+						int start=json.indexOf("thumb");
+						int end=json.indexOf("goodsid");
+//						boolean a=jpg.("Token")==-1;
+						if(start!=-1&end!=-1) {
+							String jpg=json.substring(start+8,end-3).replace("\\/","/");
 							background.setImageDataSource(jpg.replaceAll("\\/","/"),
 									0, DecodeMode.FIX_XY);
 							background.startImageLoad(false);
 
 						}else{
 							background.setImageDataSource("https://images.i888vip.com/R7iR4GUtiGg4rf0B.jpg",
-							0, DecodeMode.FIX_XY);
+									0, DecodeMode.FIX_XY);
 							background.startImageLoad(false);
 						}
 					}
@@ -742,11 +866,18 @@ public class MainFragment extends BaseFragment {
 					@Override
 					public void run() {
 						int start=json.indexOf("logo");
-						int end=json.lastIndexOf("}");
-						String jpg=json.substring(start+7,end-2).replace("\\/","/");
-						mLogoImageView.setImageDataSource(jpg,
-								0, DecodeMode.FIT_WIDTH);
-						mLogoImageView.startImageLoad(false);
+						int end=json.indexOf("ads");
+                        if(start!=-1&end!=-1) {
+                            String jpg=json.substring(start+7,end-3).replace("\\/","/");
+                            background.setImageDataSource(jpg.replaceAll("\\/","/"),
+                                    0, DecodeMode.FIX_XY);
+                            background.startImageLoad(false);
+
+                        }else{
+                            background.setImageDataSource("https://images.i888vip.com/R7iR4GUtiGg4rf0B.jpg",
+                                    0, DecodeMode.FIX_XY);
+                            background.startImageLoad(false);
+                        }
 //						Request request1=new Request.Builder().url(url).build();
 //						OkHttpClient okHttpClient1=new OkHttpClient();
 //						okHttpClient.newCall(request).enqueue(new Callback() {
@@ -1003,6 +1134,14 @@ public class MainFragment extends BaseFragment {
 //			});
 //		return  Config.token;
 //	}
+
+	public FrameLayout  getMainPage(){
+		return  mMainPage;
+	}
+
+	public View getMenubar_layout(){
+		return  menubar_layout;
+	}
 	String url;
 	private static long lastClickTime;
 	private void setCurrentMenuImpl(final int index) {
@@ -1022,13 +1161,30 @@ public class MainFragment extends BaseFragment {
 					AndroidUtils.MainHandler.postDelayed(this, 300L);
 					return;
 				}
-
-
-
+				mine.setVisibility(View.GONE);
+				MainFragment.instance.getActivity().findViewById(ResourceUtil.getId(getContext(), "fanhui2")).setVisibility(View.VISIBLE);
 				switch (index) {
 					case 0://主页
-						mMainPage.setVisibility(View.VISIBLE);
-						menubar_layout.setVisibility(View.GONE);
+						setCurrentMenu(7);
+
+							onBackPressed();
+
+//						else if(MainWebFragment.instance!=null) {
+//							MainWebFragment.instance.onBackPressed();
+//							MainFragment.instance.onBackPressed();
+//							if(ifback==false){
+//								mMainPage.setVisibility(View.VISIBLE);
+//								menubar_layout.setVisibility(View.GONE);
+//								ifback=true;
+//							}
+//						}
+
+//						else{
+//							mMainPage.setVisibility(View.VISIBLE);
+//							menubar_layout.setVisibility(View.GONE);
+
+//}
+
 
 //						replace(instance, new MainFragment(), false);
 
@@ -1052,11 +1208,13 @@ public class MainFragment extends BaseFragment {
 						break;
 					case 2:// 购物车
 //						 fragmentC.setVisibility(View.VISIBLE);
+
 						mMainPage.setVisibility(View.GONE);mMainPage.setVisibility(View.GONE);
 						menubar_layout.setVisibility(View.VISIBLE);
 //						url = Config.WebShoppingCart + "?key=" + LoginHelper.getUserKey(getContext());
 						url=Config.BasePrefix+"/addons/ewei_shop/template/pad/default/shop/new-cart.html";
 //						url="https://www.baidu.com";
+						ifback=false;
 						replace(instance, new MainWebFragment(url, 0), false);
 
 						updateShoppingcartNum();
@@ -1084,39 +1242,43 @@ public class MainFragment extends BaseFragment {
 					case 3:// 订单
 						// fragmentC.setVisibility(View.VISIBLE);
 //						url = Config.WebOrder + "?key=" + LoginHelper.getUserKey(getContext());
+
 						mMainPage.setVisibility(View.GONE);
-						menubar_layout.setVisibility(View.VISIBLE);
+						menubar_layout.setVisibility(View.VISIBLE);ifback=false;
 						url=Config.BasePrefix+"/addons/ewei_shop/template/pad/default/shop/new-order.html";
 						replace(instance, new MainWebFragment(url, 0), false);
+
 						break;
 					case 4:// 收藏
 						// fragmentC3.setVisibility(View.VISIBLE);
 //						url = Config.WebSearch + "?key=" + LoginHelper.getUserKey(getContext());
 						mMainPage.setVisibility(View.GONE);
-						menubar_layout.setVisibility(View.VISIBLE);
+						menubar_layout.setVisibility(View.VISIBLE);ifback=false;
+						
 						url=Config.BasePrefix+"/addons/ewei_shop/template/pad/default/shop/new-collection.html";
 						replace(instance, new MainWebFragment(url, 0), false);
 						// ensureSearchFragment();
 						// fragment3.popBackStackInclusive();
+
 						break;
 					case 5:// 足迹
 						// fragmentC.setVisibility(View.VISIBLE);
 //						mMainPage.setVisibility(View.GONE);
 //						replace(instance, new BrowseHistoryFragment(), false);
-						menubar_layout.setVisibility(View.VISIBLE);
-						FragmentActivity.launchMe(getActivity(), new SettingFragment());
+						mMainPage.setVisibility(View.VISIBLE);
+						menubar_layout.setVisibility(View.GONE);
 						break;
 					case 6:
 						mMainPage.setVisibility(View.GONE);
 						menubar_layout.setVisibility(View.VISIBLE);
 						setCurrentMenu(7);
-						replace(instance, new MainIndexFragment("order"), false);
+						replace(instance, new MainIndexFragment("exclusiveOrder"), false);
 						break;
 					case 8:
 						mMainPage.setVisibility(View.GONE);
 						menubar_layout.setVisibility(View.VISIBLE);
 						setCurrentMenu(7);
-						replace(instance, new MainIndexFragment("exclusiveOrder"), false);
+						replace(instance, new MainIndexFragment("order"), false);
 						break;
                     case  7:
                         break;
@@ -1130,6 +1292,13 @@ public class MainFragment extends BaseFragment {
 	@Override
 	public boolean onBackPressed() {
 		invalidateMenuBar();
+//
+		if(ifback==false){
+			mMainPage.setVisibility(View.VISIBLE);
+			menubar_layout.setVisibility(View.GONE);
+			ifback=true;
+		}
+
 		// if (fragmentC1.getVisibility() == View.VISIBLE)
 		// {
 		// return fragment1.onBackPressed();
@@ -1481,6 +1650,9 @@ public class MainFragment extends BaseFragment {
 	public void addWebFragmentToCurrent(String url, boolean backToRoot) {
 		addFragmentToCurrent(new MainWebFragment(url, 1), backToRoot);
 	}
+	public void addWebFragmentToCurrent(String url, boolean backToRoot,int index) {
+		addFragmentToCurrent(new MainWebFragment(url, index,0), backToRoot);
+	}
 
 	public void addProductDetailFragmentToMain(String goodsId, String tag, boolean isShop, boolean hasModelInfo,
 											   boolean backToRoot) {
@@ -1489,7 +1661,7 @@ public class MainFragment extends BaseFragment {
 			mGoodsTag = tag;
 		}
 		// mGoodsIsShop = isShop;
-		addFragmentToMain(new ProductDetailsFragment(tag, goodsId, isShop, hasModelInfo), backToRoot);
+		addFragmentToMain(new ProductDetailsFragment(tag, goodsId, isShop, hasModelInfo,Config.goodurl), backToRoot);
 	}
 
 	// public void addProductDetailFragmentToOther(String goodsId, String tag, boolean isShop, boolean backToRoot)

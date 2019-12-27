@@ -131,7 +131,7 @@
 60-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:56:9-33
 61
 62    <application
-62-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:58:5-254:19
+62-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:58:5-255:19
 63        android:allowBackup="true"
 63-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:59:9-35
 64        android:debuggable="true"
@@ -139,357 +139,356 @@
 65-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:60:9-45
 66        android:label="@string/app_name"
 66-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:61:9-41
-67        android:testOnly="true"
-68        android:theme="@style/AppTheme" >
-68-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:62:9-40
-69        <activity
-69-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:63:9-81:20
-70            android:name="com.shiyou.tryapp2.app.MainActivity"
-70-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:64:13-63
-71            android:configChanges="orientation|keyboardHidden"
-71-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:65:13-63
-72            android:launchMode="standard"
-72-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:66:13-42
-73            android:screenOrientation="sensorLandscape"
-73-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:67:13-56
-74            android:windowSoftInputMode="adjustPan" >
-74-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:68:13-52
-75            <intent-filter>
-75-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:69:13-73:29
-76                <action android:name="android.intent.action.MAIN" />
-76-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:70:17-69
-76-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:70:25-66
-77
-78                <category android:name="android.intent.category.LAUNCHER" />
-78-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:72:17-77
-78-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:72:27-74
-79            </intent-filter>
-80
-81            <meta-data
-81-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:75:13-77:40
-82                android:name="unityplayer.UnityActivity"
-82-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:76:17-57
-83                android:value="true" />
-83-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:77:17-37
-84            <meta-data
-84-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:78:13-80:41
-85                android:name="unityplayer.ForwardNativeEventsToDalvik"
-85-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:79:17-71
-86                android:value="false" />
-86-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:80:17-38
-87        </activity>
-88        <activity
-88-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:82:9-98:20
-89            android:name="com.shiyou.tryapp2.app.ReceiveEventActivity"
-89-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:83:13-71
-90            android:configChanges="orientation|keyboardHidden"
-90-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:84:13-63
-91            android:launchMode="standard"
-91-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:85:13-42
-92            android:screenOrientation="sensorLandscape"
-92-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:86:13-56
-93            android:theme="@style/TransparentTheme" >
-93-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:87:13-52
-94            <intent-filter>
-94-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:88:13-97:29
-95                <action android:name="android.intent.action.VIEW" />
-95-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:89:17-69
-95-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:89:25-66
-96
-97                <category android:name="android.intent.category.DEFAULT" />
-97-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:91:17-76
-97-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:91:27-73
-98                <category android:name="android.intent.category.BROWSABLE" />
-98-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:92:17-78
-98-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:92:27-75
-99
-100                <data
-100-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:94:17-96:48
-101                    android:host="com.shiyou.fitsapp"
-101-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:95:21-54
-102                    android:scheme="fitsapp" />
-102-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:96:21-45
-103            </intent-filter>
-104        </activity>
-105        <activity
-105-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:99:9-105:20
-106            android:name="com.shiyou.tryapp2.app.FragmentActivity"
-106-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:100:13-67
-107            android:configChanges="orientation|keyboardHidden"
-107-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:101:13-63
-108            android:launchMode="standard"
-108-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:102:13-42
-109            android:screenOrientation="sensorLandscape"
-109-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:103:13-56
-110            android:windowSoftInputMode="adjustPan" >
-110-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:104:13-52
-111        </activity>
-112        <activity
-112-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:106:9-112:20
-113            android:name="com.shiyou.tryapp2.app.WebViewActivity"
-113-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:107:13-66
-114            android:configChanges="orientation|keyboardHidden"
-114-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:108:13-63
-115            android:launchMode="standard"
-115-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:109:13-42
-116            android:screenOrientation="sensorLandscape"
-116-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:110:13-56
-117            android:windowSoftInputMode="adjustPan" >
-117-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:111:13-52
-118        </activity>
-119        <activity
-119-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:113:9-119:20
-120            android:name="com.shiyou.tryapp2.app.camera.CameraActivity"
-120-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:114:13-72
-121            android:configChanges="orientation|keyboardHidden"
-121-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:115:13-63
-122            android:launchMode="standard"
-122-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:116:13-42
-123            android:screenOrientation="sensorLandscape"
-123-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:117:13-56
-124            android:windowSoftInputMode="adjustPan" >
-124-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:118:13-52
-125        </activity>
-126        <activity
-126-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:120:9-126:20
-127            android:name="com.shiyou.tryapp2.app.photo.PhotoAlbumActivity"
-127-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:121:13-75
-128            android:configChanges="orientation|keyboardHidden"
-128-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:122:13-63
-129            android:launchMode="standard"
-129-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:123:13-42
-130            android:screenOrientation="sensorLandscape"
-130-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:124:13-56
-131            android:windowSoftInputMode="adjustPan" >
-131-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:125:13-52
-132        </activity>
-133        <activity
-133-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:127:9-133:20
-134            android:name="com.shiyou.tryapp2.app.photo.PhotoListActivity"
-134-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:128:13-74
-135            android:configChanges="orientation|keyboardHidden"
-135-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:129:13-63
-136            android:launchMode="standard"
-136-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:130:13-42
-137            android:screenOrientation="sensorLandscape"
-137-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:131:13-56
-138            android:windowSoftInputMode="adjustPan" >
-138-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:132:13-52
-139        </activity>
-140        <activity
-140-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:134:9-140:20
-141            android:name="com.shiyou.tryapp2.app.login.LoginActivity"
-141-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:135:13-70
-142            android:configChanges="orientation|keyboardHidden"
-142-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:136:13-63
-143            android:launchMode="standard"
-143-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:137:13-42
-144            android:screenOrientation="sensorLandscape"
-144-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:138:13-56
-145            android:windowSoftInputMode="adjustPan" >
-145-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:139:13-52
-146        </activity>
-147
-148        <!-- 浠ヤ笅鏄疛Push SDK鍐呭 -->
-149        <!-- Rich push 鏍稿績鍔熻兘 since 2.0.6 -->
-150        <activity
-150-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:144:9-148:20
-151            android:name="cn.jpush.android.ui.PopWinActivity"
-151-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:145:13-62
-152            android:exported="false"
-152-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:146:13-37
-153            android:theme="@style/MyDialogStyle" >
-153-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:147:13-49
-154        </activity>
-155
-156        <!-- Required SDK鏍稿績鍔熻兘 -->
-157        <activity
-157-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:151:9-162:20
-158            android:name="cn.jpush.android.ui.PushActivity"
-158-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:152:13-60
-159            android:configChanges="orientation|keyboardHidden"
-159-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:153:13-63
-160            android:exported="false"
-160-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:154:13-37
-161            android:theme="@android:style/Theme.NoTitleBar" >
-161-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:155:13-60
-162            <intent-filter>
-162-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:156:13-161:29
-163                <action android:name="cn.jpush.android.ui.PushActivity" />
-163-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:157:17-75
-163-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:157:25-72
-164
-165                <category android:name="android.intent.category.DEFAULT" />
-165-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:91:17-76
-165-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:91:27-73
-166                <category android:name="com.shiyou.tryapp2.shop.zsa" />
-166-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:160:17-72
-166-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:160:27-69
-167            </intent-filter>
-168        </activity>
-169        <!-- Required  SDK鏍稿績鍔熻兘 -->
-170        <service
-170-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:164:9-168:19
-171            android:name="cn.jpush.android.service.DownloadService"
-171-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:165:13-68
-172            android:enabled="true"
-172-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:166:13-35
-173            android:exported="false" >
-173-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:167:13-37
-174        </service>
-175
-176        <!-- Required SDK 鏍稿績鍔熻兘 -->
-177        <!-- 鍙厤缃產ndroid:process鍙傛暟灏哖ushService鏀惧湪鍏朵粬杩涚▼涓� -->
-178        <service
-178-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:172:9-181:19
-179            android:name="cn.jpush.android.service.PushService"
-179-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:173:13-64
-180            android:process=":mult" >
-180-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:174:13-36
-181            <intent-filter>
-181-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:175:13-180:29
-182                <action android:name="cn.jpush.android.intent.REGISTER" />
-182-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:176:17-75
-182-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:176:25-72
-183                <action android:name="cn.jpush.android.intent.REPORT" />
-183-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:177:17-73
-183-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:177:25-70
-184                <action android:name="cn.jpush.android.intent.PushService" />
-184-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:178:17-78
-184-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:178:25-75
-185                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
-185-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:179:17-76
-185-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:179:25-73
-186            </intent-filter>
-187        </service>
-188
-189        <!-- since 1.8.0 option 鍙�夐」銆傜敤浜庡悓涓�璁惧涓笉鍚屽簲鐢ㄧ殑JPush鏈嶅姟鐩镐簰鎷夎捣鐨勫姛鑳姐�� -->
-190        <!-- 鑻ヤ笉鍚敤璇ュ姛鑳藉彲鍒犻櫎璇ョ粍浠讹紝灏嗕笉鎷夎捣鍏朵粬搴旂敤涔熶笉鑳借鍏朵粬搴旂敤鎷夎捣 -->
-191        <service
-191-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:185:9-194:19
-192            android:name="cn.jpush.android.service.DaemonService"
-192-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:186:13-66
-193            android:enabled="true"
-193-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:187:13-35
-194            android:exported="true" >
-194-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:188:13-36
-195            <intent-filter>
-195-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:189:13-193:29
-196                <action android:name="cn.jpush.android.intent.DaemonService" />
-196-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:190:17-80
-196-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:190:25-77
-197
-198                <category android:name="com.shiyou.tryapp2.shop.zsa" />
-198-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:160:17-72
-198-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:160:27-69
-199            </intent-filter>
-200        </service>
-201
-202        <!-- Required SDK鏍稿績鍔熻兘 -->
-203        <receiver
-203-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:197:9-218:20
-204            android:name="cn.jpush.android.service.PushReceiver"
-204-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:198:13-65
-205            android:enabled="true" >
-205-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:199:13-35
-206            <intent-filter android:priority="1000" >
-206-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:200:13-206:29
-206-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:200:28-51
-207
-208                <!-- Required  鏄剧ず閫氱煡鏍� -->
-209                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
-209-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:203:17-94
-209-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:203:25-91
-210
-211                <category android:name="com.shiyou.tryapp2.shop.zsa" />
-211-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:160:17-72
-211-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:160:27-69
-212            </intent-filter>
-213            <intent-filter>
-213-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:207:13-210:29
-214                <action android:name="android.intent.action.USER_PRESENT" />
-214-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:208:17-77
-214-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:208:25-74
-215                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-215-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:209:17-79
-215-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:209:25-76
-216            </intent-filter>
-217            <!-- Optional -->
-218            <intent-filter>
-218-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:212:13-217:29
-219                <action android:name="android.intent.action.PACKAGE_ADDED" />
-219-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:213:17-78
-219-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:213:25-75
-220                <action android:name="android.intent.action.PACKAGE_REMOVED" />
-220-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:214:17-80
-220-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:214:25-77
-221
-222                <data android:scheme="package" />
-222-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:94:17-96:48
-222-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:96:21-45
-223            </intent-filter>
-224        </receiver>
-225
-226        <!-- Required SDK鏍稿績鍔熻兘 -->
-227        <receiver
-227-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:221:9-223:40
-228            android:name="cn.jpush.android.service.AlarmReceiver"
-228-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:222:13-66
-229            android:exported="false" />
-229-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:223:13-37
-230
-231        <!-- User defined.  For test only  鐢ㄦ埛鑷畾涔夌殑骞挎挱鎺ユ敹鍣� -->
-232        <receiver
-232-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:226:9-245:20
-233            android:name="com.example.jpushdemo.MyReceiver"
-233-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:227:13-60
-234            android:enabled="true"
-234-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:228:13-35
-235            android:exported="false" >
-235-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:229:13-37
-236            <intent-filter>
-236-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:230:13-244:29
-237
-238                <!-- Required  鐢ㄦ埛娉ㄥ唽SDK鐨刬ntent -->
-239                <action android:name="cn.jpush.android.intent.REGISTRATION" />
-239-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:233:17-79
-239-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:233:25-76
-240                <!-- Required  鐢ㄦ埛鎺ユ敹SDK娑堟伅鐨刬ntent -->
-241                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
-241-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:235:17-83
-241-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:235:25-80
-242                <!-- Required  鐢ㄦ埛鎺ユ敹SDK閫氱煡鏍忎俊鎭殑intent -->
-243                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
-243-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:237:17-88
-243-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:237:25-85
-244                <!-- Required  鐢ㄦ埛鎵撳紑鑷畾涔夐�氱煡鏍忕殑intent -->
-245                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
-245-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:239:17-86
-245-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:239:25-83
-246                <!-- 鎺ユ敹缃戠粶鍙樺寲 杩炴帴/鏂紑 since 1.6.3 -->
-247                <action android:name="cn.jpush.android.intent.CONNECTION" />
-247-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:241:17-77
-247-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:241:25-74
-248
-249                <category android:name="com.shiyou.tryapp2.shop.zsa" />
-249-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:160:17-72
-249-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:160:27-69
-250            </intent-filter>
-251        </receiver>
-252        <!-- Required  . Enable it you can get statistics data with channel -->
-253        <meta-data
-253-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:247:9-249:46
-254            android:name="JPUSH_CHANNEL"
-254-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:248:13-41
-255            android:value="shiyou-android" />
-255-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:249:13-43
-256        <!-- </>鍊兼潵鑷紑鍙戣�呭钩鍙板彇寰楃殑AppKey -->
-257        <meta-data
-257-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:251:9-253:56
-258            android:name="JPUSH_APPKEY"
-258-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:252:13-40
-259            android:value="150ab1f2d9d55051bb5c58d4" />
-259-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:253:13-53
-260    </application>
-261
-262</manifest>
+67        android:theme="@style/AppTheme" >
+67-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:63:9-40
+68        <activity
+68-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:64:9-82:20
+69            android:name="com.shiyou.tryapp2.app.MainActivity"
+69-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:65:13-63
+70            android:configChanges="orientation|keyboardHidden"
+70-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:66:13-63
+71            android:launchMode="standard"
+71-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:67:13-42
+72            android:screenOrientation="sensorLandscape"
+72-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:68:13-56
+73            android:windowSoftInputMode="adjustPan" >
+73-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:69:13-52
+74            <intent-filter>
+74-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:70:13-74:29
+75                <action android:name="android.intent.action.MAIN" />
+75-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:71:17-69
+75-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:71:25-66
+76
+77                <category android:name="android.intent.category.LAUNCHER" />
+77-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:73:17-77
+77-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:73:27-74
+78            </intent-filter>
+79
+80            <meta-data
+80-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:76:13-78:40
+81                android:name="unityplayer.UnityActivity"
+81-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:77:17-57
+82                android:value="true" />
+82-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:78:17-37
+83            <meta-data
+83-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:79:13-81:41
+84                android:name="unityplayer.ForwardNativeEventsToDalvik"
+84-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:80:17-71
+85                android:value="false" />
+85-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:81:17-38
+86        </activity>
+87        <activity
+87-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:83:9-99:20
+88            android:name="com.shiyou.tryapp2.app.ReceiveEventActivity"
+88-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:84:13-71
+89            android:configChanges="orientation|keyboardHidden"
+89-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:85:13-63
+90            android:launchMode="standard"
+90-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:86:13-42
+91            android:screenOrientation="sensorLandscape"
+91-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:87:13-56
+92            android:theme="@style/TransparentTheme" >
+92-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:88:13-52
+93            <intent-filter>
+93-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:89:13-98:29
+94                <action android:name="android.intent.action.VIEW" />
+94-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:90:17-69
+94-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:90:25-66
+95
+96                <category android:name="android.intent.category.DEFAULT" />
+96-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:92:17-76
+96-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:92:27-73
+97                <category android:name="android.intent.category.BROWSABLE" />
+97-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:93:17-78
+97-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:93:27-75
+98
+99                <data
+99-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:95:17-97:48
+100                    android:host="com.shiyou.fitsapp"
+100-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:96:21-54
+101                    android:scheme="fitsapp" />
+101-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:97:21-45
+102            </intent-filter>
+103        </activity>
+104        <activity
+104-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:100:9-106:20
+105            android:name="com.shiyou.tryapp2.app.FragmentActivity"
+105-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:101:13-67
+106            android:configChanges="orientation|keyboardHidden"
+106-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:102:13-63
+107            android:launchMode="standard"
+107-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:103:13-42
+108            android:screenOrientation="sensorLandscape"
+108-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:104:13-56
+109            android:windowSoftInputMode="adjustPan" >
+109-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:105:13-52
+110        </activity>
+111        <activity
+111-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:107:9-113:20
+112            android:name="com.shiyou.tryapp2.app.WebViewActivity"
+112-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:108:13-66
+113            android:configChanges="orientation|keyboardHidden"
+113-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:109:13-63
+114            android:launchMode="standard"
+114-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:110:13-42
+115            android:screenOrientation="sensorLandscape"
+115-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:111:13-56
+116            android:windowSoftInputMode="adjustPan" >
+116-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:112:13-52
+117        </activity>
+118        <activity
+118-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:114:9-120:20
+119            android:name="com.shiyou.tryapp2.app.camera.CameraActivity"
+119-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:115:13-72
+120            android:configChanges="orientation|keyboardHidden"
+120-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:116:13-63
+121            android:launchMode="standard"
+121-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:117:13-42
+122            android:screenOrientation="sensorLandscape"
+122-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:118:13-56
+123            android:windowSoftInputMode="adjustPan" >
+123-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:119:13-52
+124        </activity>
+125        <activity
+125-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:121:9-127:20
+126            android:name="com.shiyou.tryapp2.app.photo.PhotoAlbumActivity"
+126-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:122:13-75
+127            android:configChanges="orientation|keyboardHidden"
+127-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:123:13-63
+128            android:launchMode="standard"
+128-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:124:13-42
+129            android:screenOrientation="sensorLandscape"
+129-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:125:13-56
+130            android:windowSoftInputMode="adjustPan" >
+130-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:126:13-52
+131        </activity>
+132        <activity
+132-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:128:9-134:20
+133            android:name="com.shiyou.tryapp2.app.photo.PhotoListActivity"
+133-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:129:13-74
+134            android:configChanges="orientation|keyboardHidden"
+134-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:130:13-63
+135            android:launchMode="standard"
+135-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:131:13-42
+136            android:screenOrientation="sensorLandscape"
+136-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:132:13-56
+137            android:windowSoftInputMode="adjustPan" >
+137-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:133:13-52
+138        </activity>
+139        <activity
+139-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:135:9-141:20
+140            android:name="com.shiyou.tryapp2.app.login.LoginActivity"
+140-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:136:13-70
+141            android:configChanges="orientation|keyboardHidden"
+141-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:137:13-63
+142            android:launchMode="standard"
+142-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:138:13-42
+143            android:screenOrientation="sensorLandscape"
+143-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:139:13-56
+144            android:windowSoftInputMode="adjustPan" >
+144-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:140:13-52
+145        </activity>
+146
+147        <!-- 浠ヤ笅鏄疛Push SDK鍐呭 -->
+148        <!-- Rich push 鏍稿績鍔熻兘 since 2.0.6 -->
+149        <activity
+149-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:145:9-149:20
+150            android:name="cn.jpush.android.ui.PopWinActivity"
+150-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:146:13-62
+151            android:exported="false"
+151-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:147:13-37
+152            android:theme="@style/MyDialogStyle" >
+152-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:148:13-49
+153        </activity>
+154
+155        <!-- Required SDK鏍稿績鍔熻兘 -->
+156        <activity
+156-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:152:9-163:20
+157            android:name="cn.jpush.android.ui.PushActivity"
+157-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:153:13-60
+158            android:configChanges="orientation|keyboardHidden"
+158-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:154:13-63
+159            android:exported="false"
+159-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:155:13-37
+160            android:theme="@android:style/Theme.NoTitleBar" >
+160-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:156:13-60
+161            <intent-filter>
+161-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:157:13-162:29
+162                <action android:name="cn.jpush.android.ui.PushActivity" />
+162-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:158:17-75
+162-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:158:25-72
+163
+164                <category android:name="android.intent.category.DEFAULT" />
+164-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:92:17-76
+164-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:92:27-73
+165                <category android:name="com.shiyou.tryapp2.shop.zsa" />
+165-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:161:17-72
+165-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:161:27-69
+166            </intent-filter>
+167        </activity>
+168        <!-- Required  SDK鏍稿績鍔熻兘 -->
+169        <service
+169-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:165:9-169:19
+170            android:name="cn.jpush.android.service.DownloadService"
+170-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:166:13-68
+171            android:enabled="true"
+171-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:167:13-35
+172            android:exported="false" >
+172-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:168:13-37
+173        </service>
+174
+175        <!-- Required SDK 鏍稿績鍔熻兘 -->
+176        <!-- 鍙厤缃產ndroid:process鍙傛暟灏哖ushService鏀惧湪鍏朵粬杩涚▼涓� -->
+177        <service
+177-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:173:9-182:19
+178            android:name="cn.jpush.android.service.PushService"
+178-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:174:13-64
+179            android:process=":mult" >
+179-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:175:13-36
+180            <intent-filter>
+180-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:176:13-181:29
+181                <action android:name="cn.jpush.android.intent.REGISTER" />
+181-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:177:17-75
+181-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:177:25-72
+182                <action android:name="cn.jpush.android.intent.REPORT" />
+182-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:178:17-73
+182-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:178:25-70
+183                <action android:name="cn.jpush.android.intent.PushService" />
+183-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:179:17-78
+183-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:179:25-75
+184                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+184-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:180:17-76
+184-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:180:25-73
+185            </intent-filter>
+186        </service>
+187
+188        <!-- since 1.8.0 option 鍙�夐」銆傜敤浜庡悓涓�璁惧涓笉鍚屽簲鐢ㄧ殑JPush鏈嶅姟鐩镐簰鎷夎捣鐨勫姛鑳姐�� -->
+189        <!-- 鑻ヤ笉鍚敤璇ュ姛鑳藉彲鍒犻櫎璇ョ粍浠讹紝灏嗕笉鎷夎捣鍏朵粬搴旂敤涔熶笉鑳借鍏朵粬搴旂敤鎷夎捣 -->
+190        <service
+190-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:186:9-195:19
+191            android:name="cn.jpush.android.service.DaemonService"
+191-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:187:13-66
+192            android:enabled="true"
+192-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:188:13-35
+193            android:exported="true" >
+193-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:189:13-36
+194            <intent-filter>
+194-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:190:13-194:29
+195                <action android:name="cn.jpush.android.intent.DaemonService" />
+195-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:191:17-80
+195-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:191:25-77
+196
+197                <category android:name="com.shiyou.tryapp2.shop.zsa" />
+197-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:161:17-72
+197-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:161:27-69
+198            </intent-filter>
+199        </service>
+200
+201        <!-- Required SDK鏍稿績鍔熻兘 -->
+202        <receiver
+202-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:198:9-219:20
+203            android:name="cn.jpush.android.service.PushReceiver"
+203-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:199:13-65
+204            android:enabled="true" >
+204-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:200:13-35
+205            <intent-filter android:priority="1000" >
+205-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:201:13-207:29
+205-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:201:28-51
+206
+207                <!-- Required  鏄剧ず閫氱煡鏍� -->
+208                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+208-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:204:17-94
+208-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:204:25-91
+209
+210                <category android:name="com.shiyou.tryapp2.shop.zsa" />
+210-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:161:17-72
+210-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:161:27-69
+211            </intent-filter>
+212            <intent-filter>
+212-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:208:13-211:29
+213                <action android:name="android.intent.action.USER_PRESENT" />
+213-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:209:17-77
+213-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:209:25-74
+214                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+214-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:210:17-79
+214-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:210:25-76
+215            </intent-filter>
+216            <!-- Optional -->
+217            <intent-filter>
+217-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:213:13-218:29
+218                <action android:name="android.intent.action.PACKAGE_ADDED" />
+218-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:214:17-78
+218-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:214:25-75
+219                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+219-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:215:17-80
+219-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:215:25-77
+220
+221                <data android:scheme="package" />
+221-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:95:17-97:48
+221-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:97:21-45
+222            </intent-filter>
+223        </receiver>
+224
+225        <!-- Required SDK鏍稿績鍔熻兘 -->
+226        <receiver
+226-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:222:9-224:40
+227            android:name="cn.jpush.android.service.AlarmReceiver"
+227-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:223:13-66
+228            android:exported="false" />
+228-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:224:13-37
+229
+230        <!-- User defined.  For test only  鐢ㄦ埛鑷畾涔夌殑骞挎挱鎺ユ敹鍣� -->
+231        <receiver
+231-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:227:9-246:20
+232            android:name="com.example.jpushdemo.MyReceiver"
+232-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:228:13-60
+233            android:enabled="true"
+233-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:229:13-35
+234            android:exported="false" >
+234-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:230:13-37
+235            <intent-filter>
+235-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:231:13-245:29
+236
+237                <!-- Required  鐢ㄦ埛娉ㄥ唽SDK鐨刬ntent -->
+238                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+238-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:234:17-79
+238-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:234:25-76
+239                <!-- Required  鐢ㄦ埛鎺ユ敹SDK娑堟伅鐨刬ntent -->
+240                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+240-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:236:17-83
+240-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:236:25-80
+241                <!-- Required  鐢ㄦ埛鎺ユ敹SDK閫氱煡鏍忎俊鎭殑intent -->
+242                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+242-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:238:17-88
+242-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:238:25-85
+243                <!-- Required  鐢ㄦ埛鎵撳紑鑷畾涔夐�氱煡鏍忕殑intent -->
+244                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+244-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:240:17-86
+244-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:240:25-83
+245                <!-- 鎺ユ敹缃戠粶鍙樺寲 杩炴帴/鏂紑 since 1.6.3 -->
+246                <action android:name="cn.jpush.android.intent.CONNECTION" />
+246-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:242:17-77
+246-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:242:25-74
+247
+248                <category android:name="com.shiyou.tryapp2.shop.zsa" />
+248-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:161:17-72
+248-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:161:27-69
+249            </intent-filter>
+250        </receiver>
+251        <!-- Required  . Enable it you can get statistics data with channel -->
+252        <meta-data
+252-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:248:9-250:46
+253            android:name="JPUSH_CHANNEL"
+253-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:249:13-41
+254            android:value="shiyou-android" />
+254-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:250:13-43
+255        <!-- </>鍊兼潵鑷紑鍙戣�呭钩鍙板彇寰楃殑AppKey -->
+256        <meta-data
+256-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:252:9-254:56
+257            android:name="JPUSH_APPKEY"
+257-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:253:13-40
+258            android:value="150ab1f2d9d55051bb5c58d4" />
+258-->D:\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\tryApp2ForShop\src\main\AndroidManifest.xml:254:13-53
+259    </application>
+260
+261</manifest>

@@ -12,6 +12,7 @@
     >
 
 
+
     <android.extend.widget.FragmentContainer
         android:id="@+id/fragment_container"
         android:layout_width="fill_parent"
@@ -171,216 +172,90 @@
 
     </android.extend.widget.FragmentContainer>
 
-    <android.extend.widget.ExtendLinearLayout
+    <android.extend.widget.ExtendFrameLayout
         android:id="@+id/mainPage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/base_background"
         android:orientation="vertical">
-
+        <android.extend.widget.ExtendImageView
+            android:id="@+id/zhuyebeijing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
         <FrameLayout
-
+            android:id="@+id/bankuai1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3">
+
+<!--        <android.extend.widget.ExtendLinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
+
+
+<!--            <android.extend.widget.ExtendImageView-->
+<!--                android:id="@+id/logo"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="3"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:visibility="gone"-->
+<!--                />-->
+<!--            -->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:layout_height="0dp">-->
+
+<!--                </LinearLayout>-->
+
+
+
+
+<!--        </android.extend.widget.ExtendLinearLayout>-->
             <android.extend.widget.ExtendImageView
                 android:id="@+id/background"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
-                >
-
-            </android.extend.widget.ExtendImageView>
-        <android.extend.widget.ExtendLinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-
-            <android.extend.widget.ExtendImageView
-                android:id="@+id/logo"
-                android:layout_width="200dp"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:layout_gravity="center"
                 />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_weight="5"
-                    android:layout_height="0dp">
-
-                </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/menubar_layout2"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                android:layout_gravity="end"
                 android:orientation="horizontal">
 
-                <!--<ScrollView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_weight="1"-->
-                <!--android:scrollbars="none">-->
-
-                <!--<android.extend.widget.MenuBar-->
-                <!--android:id="@+id/menubar2"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="wrap_content">-->
-
-                <!--<LinearLayout-->
-                <!--android:id="@+id/menugroup2"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:orientation="horizontal">-->
-
-                <!--<android.extend.widget.MenuView-->
-                <!--android:layout_width="40dp"-->
-                <!--android:layout_height="40dp"-->
-                <!--android:layout_marginLeft="18dp"-->
-                <!--android:background="@drawable/selector_main_menuitem"-->
-                <!--android:clickable="true"-->
-                <!--android:focusable="true"-->
-                <!--android:visibility="gone">-->
-
-                <!--<ImageView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:scaleType="fitCenter"-->
-                <!--android:src="@drawable/selector_main_porduct" />-->
-                <!--</android.extend.widget.MenuView>-->
-
-                <!--<android.extend.widget.MenuView-->
-                <!--android:layout_width="40dp"-->
-                <!--android:layout_height="40dp"-->
-                <!--android:layout_marginLeft="18dp"-->
-                <!--android:background="@drawable/selector_main_menuitem"-->
-                <!--android:clickable="true"-->
-                <!--android:focusable="true"-->
-                <!--android:visibility="gone">-->
-
-                <!--<ImageView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:scaleType="fitCenter"-->
-                <!--android:src="@drawable/selector_main_other" />-->
-                <!--</android.extend.widget.MenuView>-->
-
-                <!--<android.extend.widget.MenuView-->
-                <!--android:layout_width="40dp"-->
-                <!--android:layout_height="40dp"-->
-                <!--android:layout_marginLeft="18dp"-->
-                <!--android:background="@drawable/selector_main_menuitem"-->
-                <!--android:clickable="true"-->
-                <!--android:focusable="true">-->
-
-                <!--<ImageView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:scaleType="fitCenter"-->
-
-                <!--android:src="@drawable/main_shoppingcart2" />-->
-
-                <!--<TextView-->
-                <!--android:id="@+id/shoppingcart_num2"-->
-                <!--android:layout_width="15dp"-->
-                <!--android:layout_height="15dp"-->
-                <!--android:layout_gravity="top|end"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:layout_marginEnd="20dp"-->
-                <!--android:background="@drawable/shape_main_menubar_badge_bg"-->
-                <!--android:gravity="center"-->
-                <!--android:text="99"-->
-                <!--android:textColor="@color/main_menubar_badge_font"-->
-                <!--android:textSize="10dp"-->
-                <!--android:visibility="visible" />-->
-                <!--</android.extend.widget.MenuView>-->
-
-                <!--<android.extend.widget.MenuView-->
-                <!--android:layout_width="40dp"-->
-                <!--android:layout_height="40dp"-->
-                <!--android:layout_marginLeft="18dp"-->
-                <!--android:background="@drawable/selector_main_menuitem"-->
-                <!--android:clickable="true"-->
-                <!--android:focusable="true">-->
-
-                <!--<ImageView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:scaleType="fitCenter"-->
-                <!--android:src="@drawable/main_order2" />-->
-                <!--</android.extend.widget.MenuView>-->
-
-                <!--<android.extend.widget.MenuView-->
-                <!--android:layout_width="40dp"-->
-                <!--android:layout_height="40dp"-->
-                <!--android:layout_marginLeft="18dp"-->
-                <!--android:background="@drawable/selector_main_menuitem"-->
-                <!--android:clickable="true"-->
-                <!--android:focusable="true">-->
-
-                <!--<ImageView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:scaleType="fitCenter"-->
-                <!--android:src="@drawable/main_search2" />-->
-                <!--</android.extend.widget.MenuView>-->
-                <!--&lt;!&ndash;<android.extend.widget.MenuView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="87dp"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@drawable/selector_main_menuitem"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:clickable="true"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
-                <!--&lt;!&ndash;&gt;&ndash;&gt;-->
-
-                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:scaleType="fitCenter"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:src="@drawable/selector_main_history" />&ndash;&gt;-->
-                <!--&lt;!&ndash;</android.extend.widget.MenuView>&ndash;&gt;-->
-                <!--</LinearLayout>-->
-                <!--</android.extend.widget.MenuBar>-->
-
-                <!--</ScrollView>-->
 
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="25dp"
-                    android:padding="10dp"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/shopping"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_gravity="center"
                         android:layout_weight="5"
                         android:clickable="true"
                         android:focusable="true"
-                        android:layout_gravity="center"
                         android:scaleType="fitCenter"
                         android:src="@drawable/main_shoppingcart2" />
-
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="2"
+                        android:layout_weight="4"
                         android:layout_gravity="bottom"
-                        android:layout_marginTop="5dp"
                         android:gravity="center"
-                        android:textSize="10dp"
                         android:text="购物车"
                         android:textColor="#ffff" />
                 </LinearLayout>
@@ -389,8 +264,6 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="25dp"
-                    android:padding="10dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -401,19 +274,19 @@
                         android:layout_gravity="center"
                         android:clickable="true"
                         android:focusable="true"
-                        android:textSize="1dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/main_order2" />
-
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:layout_gravity="bottom"
-                        android:layout_marginTop="5dp"
+                        android:layout_weight="4"
                         android:gravity="center"
+                        android:layout_gravity="bottom"
                         android:text="订单"
-                        android:textSize="10dp"
                         android:textColor="#ffff" />
                 </LinearLayout>
 
@@ -421,8 +294,6 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="25dp"
-                    android:padding="10dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -435,16 +306,17 @@
                         android:focusable="true"
                         android:scaleType="fitCenter"
                         android:src="@drawable/main_search2" />
-
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:layout_gravity="bottom"
-                        android:layout_marginTop="5dp"
+                        android:layout_weight="4"
                         android:gravity="center"
                         android:text="收藏"
-                        android:textSize="10dp"
+                        android:layout_gravity="bottom"
                         android:textColor="#ffff" />
                 </LinearLayout>
 
@@ -452,8 +324,6 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="25dp"
-                    android:padding="10dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -466,185 +336,135 @@
                         android:focusable="true"
                         android:scaleType="fitCenter"
                         android:src="@drawable/main_set2" />
-
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:layout_gravity="bottom"
-                        android:layout_marginTop="5dp"
+                        android:layout_weight="4"
                         android:gravity="center"
-                        android:textSize="10dp"
                         android:text="我的"
+                        android:layout_gravity="bottom"
                         android:textColor="#ffff" />
                 </LinearLayout>
             </LinearLayout>
-        </android.extend.widget.ExtendLinearLayout>
         </FrameLayout>
-            <LinearLayout
+        <LinearLayout
+            android:id="@+id/bankuai2-1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.extend.widget.ExtendImageView
+                android:id="@+id/fast"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
-                android:padding="20dp"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                android:layout_weight="5"
+                android:src="@drawable/fast" />
 
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <android.extend.widget.ExtendImageView
-                        android:id="@+id/fast"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="5"
-                        android:src="@drawable/fast" />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <android.extend.widget.ExtendImageView
-                        android:id="@+id/customized"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="5"
-                        android:src="@drawable/customized" />
-
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <android.extend.widget.ExtendImageView
-                        android:id="@+id/other"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="5"
-                        android:src="@drawable/other" />
-
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                </LinearLayout>
-            </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:padding="20dp"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <android.extend.widget.ExtendImageView
-                    android:id="@+id/gia"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="5"
-                    android:src="@drawable/gia_home" />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <android.extend.widget.ExtendImageView
-                    android:id="@+id/zs4C"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="5"
-                    android:src="@drawable/zs4c" />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <android.extend.widget.ExtendImageView
-                    android:id="@+id/px"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="5"
-                    android:src="@drawable/customguide" />
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-            </LinearLayout>
         </LinearLayout>
-    </android.extend.widget.ExtendLinearLayout>
+        <LinearLayout
+            android:id="@+id/bankuai2-2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.extend.widget.ExtendImageView
+                android:id="@+id/customized"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/customized" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bankuai2-3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.extend.widget.ExtendImageView
+                android:id="@+id/other"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/other" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bankuai3-1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.extend.widget.ExtendImageView
+                android:id="@+id/gia"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/gia_home" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bankuai3-2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.extend.widget.ExtendImageView
+                android:id="@+id/zs4C"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/zs4c" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bankuai3-3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.extend.widget.ExtendImageView
+                android:id="@+id/px"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/customguide" />
+
+
+        </LinearLayout>
+
+
+    </android.extend.widget.ExtendFrameLayout>
     <LinearLayout
         android:id="@+id/mine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:background="#F000"
+        android:background="#000"
         android:orientation="vertical">
 
 
     </LinearLayout>
     <LinearLayout
         android:id="@+id/menubar_layout"
-        android:layout_width="50dp"
-        android:layout_height="300dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E8F5E9"
+        android:alpha="5"
+        android:visibility="gone"
         android:orientation="vertical">
 
         <android.extend.widget.ExtendImageView
@@ -671,8 +491,10 @@
                     android:orientation="vertical">
 
                     <android.extend.widget.MenuView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:background="@drawable/selector_main_menuitem"
                         android:clickable="true"
                         android:focusable="true">
@@ -681,29 +503,32 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/shouye" />
+                            android:src="@drawable/fanhui" />
 
                     </android.extend.widget.MenuView>
 
                     <android.extend.widget.MenuView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:id="@+id/fanhui2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:background="@drawable/selector_main_menuitem"
                         android:clickable="true"
                         android:focusable="true"
-                        android:visibility="gone">
+                        >
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/selector_main_other" />
+                            android:src="@drawable/fanhui" />
                     </android.extend.widget.MenuView>
 
                     <android.extend.widget.MenuView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/selector_main_menuitem"
                         android:clickable="true"
@@ -714,7 +539,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/selector_main_shoppingcart" />
+                            android:src="@drawable/main_shoppingcart" />
 
 
 
@@ -734,8 +559,9 @@
                     </android.extend.widget.MenuView>
 
                     <android.extend.widget.MenuView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/selector_main_menuitem"
                         android:clickable="true"
@@ -745,13 +571,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/selector_main_order" />
+                            android:src="@drawable/main_order" />
 
                     </android.extend.widget.MenuView>
 
                     <android.extend.widget.MenuView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/selector_main_menuitem"
                         android:clickable="true"
@@ -761,7 +588,24 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/selector_main_search" />
+                            android:src="@drawable/main_search" />
+
+                    </android.extend.widget.MenuView>
+
+                    <android.extend.widget.MenuView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selector_main_menuitem"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/shouye" />
 
                     </android.extend.widget.MenuView>
 

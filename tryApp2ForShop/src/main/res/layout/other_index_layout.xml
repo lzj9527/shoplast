@@ -1,38 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.extend.widget.ExtendLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.extend.widget.ExtendFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:orientation="vertical">
-        <LinearLayout
+    <android.extend.widget.ExtendImageView
+        android:id="@+id/dzbj"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+        <FrameLayout
+            android:id="@+id/dzbk1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="5"
             android:orientation="vertical">
-            <android.extend.widget.ExtendViewPager
-                android:id="@+id/viewpager2"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
-                android:visibility="gone"
-                android:background="@android:color/transparent" >
-            </android.extend.widget.ExtendViewPager>
+
+
             <android.extend.widget.ExtendImageView
                 android:id="@+id/background"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
                 />
-        </LinearLayout>
+            <android.extend.widget.ExtendViewPager
+                android:id="@+id/viewpager2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent" >
+            </android.extend.widget.ExtendViewPager>
+            <LinearLayout
+                android:id="@+id/dot_container2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="40px"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+<!--            <ImageView-->
+<!--                android:id="@+id/middle_back"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@drawable/fanhui" />-->
+        </FrameLayout>
 
     <!-- android:background="@android:colo/white"
 android:paddingBottom="40px"
 android:paddingLeft="140px"
 android:paddingRight="140px" -->
     <HorizontalScrollView
+        android:id="@+id/dzbk2"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="2">
+        android:layout_weight="2"
+        android:alpha="50"
+        >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -231,4 +257,4 @@ android:paddingRight="140px" -->
         android:scrollbars="none" >
     </android.extend.widget.adapter.ScrollGridView>
 
-</android.extend.widget.ExtendLinearLayout>
+</android.extend.widget.ExtendFrameLayout>

@@ -26,6 +26,7 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -93,7 +94,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 	int mCurrentMenuIndex = -1;
 	String mSelectedMaterialTag;
 	String url;
-//	View product_details_photo;
+	View product_details_photo;
 	// View product_details_3d_bt;
 //	 View loading_indicator;
 	// private List<String> mDownloadUrlList = Collections.synchronizedList(new ArrayList<String>());
@@ -134,6 +135,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 		this.hasModelInfo = hasModelInfo;
 		this.weightRange = weightRange;
 		this.priceRange = priceRange;
+		instance=this;
 	}
 	public ProductDetailsFragment(String tag, String goodsId, boolean isShop, boolean hasModelInfo,
 								  float[] weightRange, int[] priceRange,int type)
@@ -150,6 +152,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 		this.weightRange = weightRange;
 		this.priceRange = priceRange;
 		this.type=type;
+		instance=this;
 	}
 
 
@@ -168,22 +171,26 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 		this.weightRange = weightRange;
 		this.priceRange = priceRange;
 		this.url=url;
+		instance=this;
 		Log.d(TAG, "ProductDetailsFragment: url="+url);
 	}
 
 	public ProductDetailsFragment(String tag, String goodsId, boolean isShop, boolean hasModelInfo)
 	{
 		this(tag, goodsId, isShop, hasModelInfo, null, null);
+		instance=this;
 	}
 
 	public ProductDetailsFragment(String tag, String goodsId, boolean isShop, boolean hasModelInfo,String url)
 	{
 		this(tag, goodsId, isShop, hasModelInfo, null, null,url);
+		instance=this;
 	}
 
 	public ProductDetailsFragment(String tag, String goodsId, boolean isShop, boolean hasModelInfo,int type)
 	{
 		this(tag, goodsId, isShop, hasModelInfo, null, null,type);
+		instance=this;
 	}
 
 
@@ -261,7 +268,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 		int id=ResourceUtil.getId(getContext(),"product_HadGia");
 		FragmentContainer fragmentContainer= (FragmentContainer) mProductDetails.findViewById(id);
 		fragmentContainer.setVisibility(View.VISIBLE);
-		replace(getActivity(),ResourceUtil.getId(getContext(),"product_HadGia"),new MainWebFragment(url,0),false);
+		replace(getActivity(),ResourceUtil.getId(getContext(),"product_HadGia"),new MainWebFragment(url,1),false);
 	}
 
 	private void ensureDots()
@@ -317,6 +324,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
 	{
+
 		mLayoutResID = ResourceUtil.getLayoutId(getContext(), "product_details_layout");
 		mProductDetails = super.onCreateView(inflater, container, savedInstanceState);
 		((android.extend.widget.ExtendLinearLayout)mProductDetails).setInterceptTouchEventToDownward(true);
@@ -346,6 +354,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
+
 		instance = this;
 	}
 
@@ -361,7 +370,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 				mCoupleRightLayout.setVisibility(View.GONE);
 				mDetailRightLayout.setVisibility(View.VISIBLE);
 				replace(ProductDetailsFragment.instance, ProductDetailsFragment.instance.fragmentC6ID,
-						mShopProductDetailsFragment, false);
+						mShopProductDetailsFragment, true);
 				break;
 			case 1:
 				Log.d(TAG, "ensureDetailRight: 执行对戒");
@@ -389,7 +398,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 		mCoupleRightLayout.setVisibility(View.GONE);
 		mDetailRightLayout.setVisibility(View.VISIBLE);
 		replace(ProductDetailsFragment.instance, ProductDetailsFragment.instance.fragmentC6ID,
-				mShopProductDetailsFragment, false);
+				mShopProductDetailsFragment, true);
 	}
 
 	@Override
@@ -631,8 +640,27 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 				&& mGDResponse.data.tagname.contains(Define.TAGNAME_PENDANT))
 			product_details_tryon.setVisibility(View.GONE);
 
+		DisplayMetrics metric = new DisplayMetrics();
+		getActivity().getWindowManager().getDefaultDisplay().getMetrics(metric);
+		// 屏幕宽度（像素）
+		int width = metric.widthPixels;
+		// 屏幕高度（像素）
+		int height = metric.heightPixels;
+
+		AndroidUtils.MainHandler.post(new Runnable()
+		{
+			@Override
+			public void run() {
+				MainFragment.instance.getActivity().findViewById(ResourceUtil.getId(getContext(), "fanhui2")).setVisibility(View.GONE);
+			}
+		});
+
+
 		id = ResourceUtil.getId(getActivity(), "middle_back");
-		View middle_back = mDetailMiddleLayout.findViewById(id);
+		LinearLayout middle_back = (LinearLayout) mDetailMiddleLayout.findViewById(id);
+		RelativeLayout.LayoutParams back= new RelativeLayout.LayoutParams((int)(width/25+0.5f),(int)(height*3/7/5+0.5f));
+		back.setMargins(0,(int)(height/4+0.5f)-(int)(height*3/7/5+0.5f),0,0);
+		middle_back.setLayoutParams(back);
 		middle_back.setOnClickListener(new View.OnClickListener()
 		{
 			@Override
@@ -640,8 +668,15 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 			{
 				if (AndroidUtils.isFastClick())
 					return;
-				onBackPressed();
+				instance.onBackPressed();
 				MainFragment.instance.onBackPressed();
+				AndroidUtils.MainHandler.post(new Runnable()
+				{
+					@Override
+					public void run() {
+						MainFragment.instance.getActivity().findViewById(ResourceUtil.getId(getContext(), "fanhui2")).setVisibility(View.VISIBLE);
+					}
+				});
 			}
 		});
 
@@ -652,8 +687,8 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 		// unity_container.setVisibility(View.VISIBLE);
 		// m3DShow = true;
 
-//		id = ResourceUtil.getId(getActivity(), "product_details_photo");
-//		product_details_photo = mDetailMiddleLayout.findViewById(id);
+		id = ResourceUtil.getId(getActivity(), "product_details_photo");
+		product_details_photo = mDetailMiddleLayout.findViewById(id);
 
 		// id = ResourceUtil.getId(getActivity(), "product_details_3d_bt");
 		// product_details_3d_bt = mDetailMiddleLayout.findViewById(id);
@@ -709,24 +744,24 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 				}
 			});
 		}
-		if(hasModelInfo){
-			photo_show.setVisibility(View.VISIBLE);
-		}
-//		if (!isShop || !hasModelInfo) {
-//			product_details_photo.setVisibility(View.GONE);
-//		}else{
-//			product_details_photo.setVisibility(View.VISIBLE);
-//			product_details_photo.setOnClickListener(new View.OnClickListener()
-//			{
-//				@Override
-//				public void onClick(View v)
-//				{
-//					if (AndroidUtils.isFastClick())
-//						return;
-//					set3DShow(false);
-//				}
-//			});
+//		if(hasModelInfo){
+//			photo_show.setVisibility(View.VISIBLE);
 //		}
+		if (!isShop || !hasModelInfo) {
+			product_details_photo.setVisibility(View.GONE);
+		}else{
+			product_details_photo.setVisibility(View.VISIBLE);
+			product_details_photo.setOnClickListener(new View.OnClickListener()
+			{
+				@Override
+				public void onClick(View v)
+				{
+					if (AndroidUtils.isFastClick())
+						return;
+					set3DShow(false);
+				}
+			});
+		}
 
 		id = ResourceUtil.getId(getContext(), "select_item");
 		mViewPager = (ViewPager)mDetailMiddleLayout.findViewById(id);
@@ -819,6 +854,11 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 			set3DShow(false);
 	}
 
+	public void dotest(){
+		instance.onBackPressed();
+		MainFragment.instance.onBackPressed();
+	}
+
 	private void set3DShow(boolean flag)
 	{
 		if (flag)
@@ -826,7 +866,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 			product_photo.setVisibility(View.GONE);
 			unity_container.setVisibility(View.VISIBLE);
 			m3DShow = true;
-//			product_details_photo.setSelected(false);
+			product_details_photo.setSelected(false);
 			// product_details_3d.setSelected(true);
 			product_details_3d.setCurrentMenu(mCurrentMenuIndex);
 			// material_menubar.setVisibility(View.VISIBLE);
@@ -837,8 +877,8 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 			product_photo.setVisibility(View.VISIBLE);
 			unity_container.setVisibility(View.GONE);
 			m3DShow = false;
-//			product_details_photo.setSelected(true);
-			// product_details_3d.setSelected(false);
+			product_details_photo.setSelected(true);
+//			 product_details_3d.setSelected(false);
 			mCurrentMenuIndex = product_details_3d.getCurrentMenuIdx();
 			product_details_3d.setCurrentMenu(-1);
 			// material_menubar.setVisibility(View.GONE);
@@ -1067,6 +1107,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 		@Override
 		public View onCreateView(final int position, ViewGroup parent)
 		{
+
 			// int layout = ResourceUtil.getLayoutId(getActivity(), "product_details_photo_image");
 			// View view = View.inflate(getActivity(), layout, null);
 			// int id = ResourceUtil.getId(getActivity(), "image");
@@ -1141,7 +1182,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 			hideLoadingIndicator();
 			if(datas.customization==1){
 				product_photo.setVisibility(View.GONE);
-				photo_show.setVisibility(View.VISIBLE);
+//				photo_show.setVisibility(View.VISIBLE);
 				product_details_3d.setVisibility(View.VISIBLE);
 			}
 			return;
@@ -1205,7 +1246,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 			if(detail .customization==1){
 				product_details_tryon.setVisibility(View.VISIBLE);
 				product_photo.setVisibility(View.GONE);
-				photo_show.setVisibility(View.VISIBLE);
+//				photo_show.setVisibility(View.VISIBLE);
 				product_details_3d.setVisibility(View.VISIBLE);
 			}
 			return;

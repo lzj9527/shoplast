@@ -1,13 +1,5 @@
 package com.shiyou.tryapp2.app;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
@@ -17,10 +9,8 @@ import android.extend.app.BaseFragment;
 import android.extend.app.fragment.SwipeRefreshWebViewFragment;
 import android.extend.cache.FileCacheManager;
 import android.extend.loader.BaseParser.DataFrom;
-import android.extend.loader.BasicHttpLoadParams;
 import android.extend.loader.HttpLoader;
 import android.extend.loader.Loader.CacheMode;
-import android.extend.loader.UrlLoader;
 import android.extend.util.AndroidUtils;
 import android.extend.util.FileUtils;
 import android.extend.util.HttpUtils;
@@ -35,15 +25,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
-import android.webkit.ValueCallback;
 import android.webkit.WebSettings;
-import android.widget.TextView;
 
 import com.shiyou.tryapp2.Config;
 import com.shiyou.tryapp2.Define;
 import com.shiyou.tryapp2.FileDownloadHelper;
 import com.shiyou.tryapp2.FileDownloadHelper.OnFileDownloadCallback;
-import com.shiyou.tryapp2.RequestCode;
 import com.shiyou.tryapp2.RequestManager;
 import com.shiyou.tryapp2.RequestManager.RequestCallback;
 import com.shiyou.tryapp2.ResourceHelper;
@@ -61,16 +48,14 @@ import com.shiyou.tryapp2.data.db.BrowseHistoryDBHelper;
 import com.shiyou.tryapp2.data.response.BaseResponse;
 import com.shiyou.tryapp2.data.response.GoodsListResponse;
 import com.shiyou.tryapp2.data.response.GoodsListResponse.GoodsItem;
-import com.shiyou.tryapp2.data.response.LoginResponse;
-import com.shiyou.tryapp2.data.response.TokenResponse;
 import com.unity3d.player.UnityPlayer;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WebViewFragment extends SwipeRefreshWebViewFragment
 {
@@ -82,12 +67,14 @@ public class WebViewFragment extends SwipeRefreshWebViewFragment
 		return FileUtils.getDirectory(context, "appcache");
 	}
 
+	@SuppressLint("ValidFragment")
 	public WebViewFragment(String firstUrl, List<NameValuePair> firstRequestPairs, List<NameValuePair> baseRequestPairs)
 	{
 		super(firstUrl, firstRequestPairs, baseRequestPairs);
 		instance = this;
 	}
 
+	@SuppressLint("ValidFragment")
 	public WebViewFragment(String firstUrl)
 	{
 		super(firstUrl);
@@ -165,15 +152,15 @@ public class WebViewFragment extends SwipeRefreshWebViewFragment
 		getWebView().getSettings().setAllowFileAccessFromFileURLs(true);
 		getWebView().getSettings().setAllowUniversalAccessFromFileURLs(true);
 
-		 getWebView().getSettings().setBuiltInZoomControls(true);
+		getWebView().getSettings().setBuiltInZoomControls(true);
 		getWebView().getSettings().setSupportZoom(false);
 		getWebView().getSettings().setUseWideViewPort(false);
-		 getWebView().getSettings().setDisplayZoomControls(true);
+		getWebView().getSettings().setDisplayZoomControls(true);
 
 		getWebView().getSettings().setJavaScriptEnabled(true);
 		getWebView().addJavascriptInterface(new JavaScriptInterface(), "android");
 
-		 appCacheDirPath = getAppCacheDirectory(getActivity()).getAbsolutePath();
+		appCacheDirPath = getAppCacheDirectory(getActivity()).getAbsolutePath();
 		LogUtil.v(TAG, "appCacheDirPath=" + appCacheDirPath);
 		getWebView2().getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
 		getWebView2().getSettings().setDomStorageEnabled(true);
@@ -205,7 +192,7 @@ public class WebViewFragment extends SwipeRefreshWebViewFragment
 				@Override
 				public void run()
 				{
-					getWebView2().loadUrl("http://www.i888vip.com/addons/ewei_shop/template/pad/default/shop/getToken.html?token="+Config.token);
+					getWebView2().loadUrl("http://www.i888vip.com/addons/ewei_shop/template/pad/default/shop/getToken.html?token="+ Config.token);
 				}
 			});
 			lastClickTime = curClickTime;
@@ -405,8 +392,21 @@ public class WebViewFragment extends SwipeRefreshWebViewFragment
 							break;
 						case 20:
 							Log.d(TAG, "run: url="+url);
-							MainFragment.instance.addWebFragmentToCurrent(url, false);
-						break;
+							MainFragment.instance.getActivity().findViewById(ResourceUtil.getId(getContext(), "fanhui2")).setVisibility(View.GONE);
+							MainFragment.instance.addWebFragmentToCurrent(url, false,3);
+							break;
+						case 23:
+							Log.d(TAG, "run: url="+url);
+							MainFragment.instance.getActivity().findViewById(ResourceUtil.getId(getContext(), "fanhui2")).setVisibility(View.GONE);
+							String a=null;
+							MainFragment.instance.addWebFragmentToCurrent(url, false,3);
+							break;
+						case 24:
+							Log.d(TAG, "run: url="+url);
+							String b=null;
+							MainFragment.instance.getActivity().findViewById(ResourceUtil.getId(getContext(), "fanhui2")).setVisibility(View.GONE);
+							MainFragment.instance.addWebFragmentToCurrent(url, false,3);
+							break;
 						case 21:
 							replace(MainFragment.instance, new MainWebFragment(Config.BasePrefix+"/addons/ewei_shop/template/pad/default/shop/new-cart.html", 0), false);
 
@@ -446,25 +446,27 @@ public class WebViewFragment extends SwipeRefreshWebViewFragment
 			// add(MainFragment.instance, MainFragment.instance.fragmentC1ID, new ProductDetailsFragment(
 			// GoodsItem.TAG_RING, goodsId, true), true);
 			if (isShop == 1)
-				MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_RING, true, true, false);
+				MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_RING, true, true, true);
 			else
-				MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_RING, false, true, false);
+				MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_RING, false, true, true);
 		}
 
 
 		@JavascriptInterface
-	public void openSingleDetail(final String goodsId, final String url){
-		LogUtil.v(TAG, "openDetailWindow: " + goodsId + "; " + url );
-		if (AndroidUtils.isFastClick())
-			return;
-		MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_RING, true, true, false,url);
-	}
+		public void openSingleDetail(final String goodsId, final String url){
+			LogUtil.v(TAG, "openDetailWindow: " + goodsId + "; " + url );
+			if (AndroidUtils.isFastClick())
+				return;
+			Config.goodurl=url;
+			MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_RING, true, true, false,url);
+		}
 
 		@JavascriptInterface
 		public void openSingleOrderDetail(final String goodsId, final String url){
 			LogUtil.v(TAG, "openDetailWindow: " + goodsId + "; " + url );
 			if (AndroidUtils.isFastClick())
 				return;
+			Config.goodurl=url;
 			MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_RING, true, true, false,url);
 		}
 
@@ -478,9 +480,9 @@ public class WebViewFragment extends SwipeRefreshWebViewFragment
 			// add(MainFragment.instance, MainFragment.instance.fragmentC1ID, new ProductDetailsFragment(
 			// GoodsItem.TAG_COUPLE, goodsId, true), true);
 			if (isShop == 1)
-				MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_COUPLE, true, true, false);
+				MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_COUPLE, true, false, true);
 			else
-				MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_COUPLE, false, true, false);
+				MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_COUPLE, false, false, true);
 		}
 
 		@JavascriptInterface
@@ -488,7 +490,8 @@ public class WebViewFragment extends SwipeRefreshWebViewFragment
 			LogUtil.v(TAG, "openDetailWindow: " + goodsId + "; " + url );
 			if (AndroidUtils.isFastClick())
 				return;
-			MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_COUPLE, true, true, false,url);
+			Config.goodurl=url;
+			MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_COUPLE, true, false, false,url);
 		}
 
 
@@ -497,7 +500,8 @@ public class WebViewFragment extends SwipeRefreshWebViewFragment
 			LogUtil.v(TAG, "openDetailWindow: " + goodsId + "; " + url );
 			if (AndroidUtils.isFastClick())
 				return;
-			MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_COUPLE, true, true, false,url);
+			Config.goodurl=url;
+			MainFragment.instance.addProductDetailFragmentToCurrent(goodsId, Define.TAG_COUPLE, true, false, false,url);
 		}
 
 
@@ -508,7 +512,7 @@ public class WebViewFragment extends SwipeRefreshWebViewFragment
 			LogUtil.v(TAG, "openDetailWindowFromJIA: " + goodsId + "; " + url + "; " + jiaJson);
 			// add(MainFragment.instance, MainFragment.instance.fragmentC1ID, new ConfirmShopDetailsFragment(goodsId,
 			// jiaJson), true);
-			MainFragment.instance.addFragmentToCurrent(new ConfirmShopDetailsFragment(goodsId, jiaJson, 1), false);
+			MainFragment.instance.addFragmentToCurrent(new ConfirmShopDetailsFragment(goodsId, jiaJson, 1), true);
 		}
 
 		// JIA选钻后添加至购物车

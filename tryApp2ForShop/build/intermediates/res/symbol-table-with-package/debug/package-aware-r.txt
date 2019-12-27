@@ -136,6 +136,7 @@ drawable dot_container_bg
 drawable dot_container_bg1
 drawable duijie
 drawable erding
+drawable fanhui
 drawable fast
 drawable gia
 drawable gia2
@@ -330,6 +331,13 @@ id arrow_right
 id back
 id back_button
 id background
+id bankuai1
+id bankuai2_1
+id bankuai2_2
+id bankuai2_3
+id bankuai3_1
+id bankuai3_2
+id bankuai3_3
 id bindHint
 id bottom
 id bottombar
@@ -378,8 +386,12 @@ id diaozhui
 id dingdan
 id divider
 id dot_container
+id dot_container2
 id drag_handle
 id duijie
+id dzbj
+id dzbk1
+id dzbk2
 id edit_password
 id edit_user
 id end
@@ -387,6 +399,7 @@ id erase_edit
 id erase_layout
 id erase_remove
 id erding
+id fanhui2
 id fast
 id flingRemove
 id fling_handle
@@ -411,6 +424,10 @@ id index_container
 id index_product
 id item
 id item_touch_helper_previous_elevation
+id jsbg
+id jsbj
+id jsbk1
+id jsbk2
 id kelajie
 id later_update
 id lay_down
@@ -427,7 +444,6 @@ id loading
 id loading_indicator
 id login
 id login_box
-id logo
 id logout
 id look_shopping
 id mainPage
@@ -504,6 +520,7 @@ id product_deputy_weight
 id product_details_3d
 id product_details_attribute
 id product_details_button
+id product_details_photo
 id product_details_selectprice_true
 id product_details_tryon
 id product_gold_weight
@@ -619,6 +636,7 @@ id wmenProductNumber
 id wmen_product_layout
 id womenRing
 id wvPopwin
+id zhuyebeijing
 id zs4C
 id zs4C2
 layout add_shoppingcart_success_dialog

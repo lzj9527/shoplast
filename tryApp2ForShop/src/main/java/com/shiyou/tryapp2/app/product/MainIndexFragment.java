@@ -23,11 +23,14 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.widget.FrameLayout;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
@@ -68,20 +71,26 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+@SuppressLint("ValidFragment")
 public class MainIndexFragment extends BaseFragment
 {
     @SuppressLint("ValidFragment")
     public MainIndexFragment(String goodsType){
         this.goodsType=goodsType;
     }
-	public static MainIndexFragment instance;
+	public static MainIndexFragment instance=null;
 	private String goodsType;
+	public static  boolean back;
 	private ViewPager mViewPager;
 	private LinearLayout mDotContainer;
 	private ImageView mWomenRing;
 	private ImageView mMenRing;
 	private ImageView mPendant;
 	private ImageView designer;
+	private ExtendImageView jsbj;
+	private FrameLayout jsbk1;
+	private LinearLayout jsbk2;
+	private  ExtendImageView jsbg;
 //	private ImageView mRightRing;
 
 	private BasePagerAdapter<AbsAdapterItem> mPagerAdapter;
@@ -110,14 +119,16 @@ public class MainIndexFragment extends BaseFragment
 	HorizontalScrollListView indexProduct;
 	BaseAdapter<AbsAdapterItem> indexProductAdapter;
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
-	{
-		instance = this;
 
+
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
+		{
+			back=true;
 		mLayoutResID = ResourceUtil.getLayoutId(getActivity(), "main_index_layout");
 		View view = super.onCreateView(inflater, container, savedInstanceState);
-		((android.extend.widget.ExtendLinearLayout)view).setInterceptTouchEventToDownward(true);
+		((android.extend.widget.ExtendFrameLayout)view).setInterceptTouchEventToDownward(true);
 
 		int id = ResourceUtil.getId(getActivity(), "viewpager");
 		mViewPager = (ViewPager)view.findViewById(id);
@@ -142,6 +153,41 @@ public class MainIndexFragment extends BaseFragment
 			}
 		});
 
+//		View middle_back = view.findViewById(R.id.middle_back);
+		DisplayMetrics metric = new DisplayMetrics();
+		getActivity().getWindowManager().getDefaultDisplay().getMetrics(metric);
+		// 屏幕宽度（像素）
+		int width = metric.widthPixels;
+		// 屏幕高度（像素）
+		int height = metric.heightPixels;
+//		FrameLayout.LayoutParams back= new FrameLayout.LayoutParams((int)(width/25+0.5f),(int)(height*3/28+0.5f));
+//		back.setMargins(0,(int)(height/4+0.5f),0,0);
+//		middle_back.setLayoutParams(back);
+//		middle_back.setOnClickListener(new View.OnClickListener()
+//		{
+//			@Override
+//			public void onClick(View v)
+//			{
+//				if (AndroidUtils.isFastClick())
+//					return;
+//			onBackPressed();
+//			}
+//		});
+
+		id=ResourceUtil.getId(getContext(),"jsbk1");
+		jsbk1= (FrameLayout) view.findViewById(id);
+		FrameLayout.LayoutParams ban1= new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,(int)(height*5/7+0.5f));
+		jsbk1.setLayoutParams(ban1);
+		jsbk1.setPadding((int)(width/20+0.5f),(int)(height/40+0.5f),(int)(width/20+0.5f),0);
+		jsbk1.setVisibility(View.GONE);
+
+		id=ResourceUtil.getId(getContext(),"jsbk2");
+		jsbk2= (LinearLayout) view.findViewById(id);
+		FrameLayout.LayoutParams ban2= new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,(int)(height*2/7+0.5f));
+		ban2.setMargins(0,(int)(height*5/7+0.5f),0,0);
+		jsbk2.setLayoutParams(ban2);
+		jsbk2.setPadding(0,(int)(height*3/70+0.5f),0,(int)(height*3/70+0.5f));
+
 		id=ResourceUtil.getId(getActivity(),"womenRing");
 		mWomenRing= (ImageView) view.findViewById(id);
 		id=ResourceUtil.getId(getActivity(),"menRing");
@@ -156,6 +202,12 @@ public class MainIndexFragment extends BaseFragment
 		id = ResourceUtil.getId(getActivity(), "dot_container");
 		mDotContainer = (LinearLayout)view.findViewById(id);
 
+		id = ResourceUtil.getId(getActivity(), "jsbj");
+		jsbj = (ExtendImageView) view.findViewById(id);
+
+		id = ResourceUtil.getId(getActivity(), "jsbg");
+		jsbg = (ExtendImageView) view.findViewById(id);
+
 		id = ResourceUtil.getId(getContext(), "index_product");
 		indexProduct = (HorizontalScrollListView)view.findViewById(id);
 		// indexProduct.setVerticalDividerWidth(AndroidUtils.dp2px(getContext(), 10));
@@ -163,25 +215,28 @@ public class MainIndexFragment extends BaseFragment
 		indexProduct.setAdapter(indexProductAdapter);
 
 
+
 		doRefresh();
 
 		mWomenRing.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-
-				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(12), true,goodsType,String.valueOf(12),0), false);
+				back=false;
+				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(12), true,goodsType,String.valueOf(12),0), true);
 			}
 		});
 		mMenRing.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(15), true,goodsType,String.valueOf(15),0), false);
+				back=false;
+				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(15), true,goodsType,String.valueOf(15),0), true);
 			}
 		});
 		mPendant.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(21), true,goodsType,String.valueOf(21),0), false);
+				back=false;
+				MainFragment.instance.addFragmentToCurrent(new ProductListFragment(String.valueOf(21), true,goodsType,String.valueOf(21),0), true);
 			}
 		});
 //		mRightRing.setOnClickListener(new View.OnClickListener() {
@@ -200,8 +255,144 @@ public class MainIndexFragment extends BaseFragment
 			}
 		});
 
+		if(!goodsType.equals("order")){
+			ensureBackground3();
+//
+//			mViewPager.setVisibility(View.VISIBLE);
+//			mDotContainer.setVisibility(View.VISIBLE);
+		}else{
+			ensureBackground();
+//			mViewPager.setVisibility(View.GONE);
+//			mDotContainer.setVisibility(View.GONE);
+		}
+
+		ensureBackground2();
+
 		return view;
 	}
+
+	private void ensureBackground(){
+		Request request=new Request.Builder().url("https://api.i888vip.com/swipers/pics?token="+ Config.token).addHeader("accept","application/vnd.zltech.shop.v1+json").get().build();
+		OkHttpClient okHttpClient=new OkHttpClient();
+		okHttpClient.newCall(request).enqueue(new Callback() {
+			@Override
+			public void onFailure(Call call, IOException e) {
+				showToast("没有背景");
+			}
+
+			@Override
+			public void onResponse(Call call, Response response) throws IOException {
+				final  String json=response.body().string();
+				AndroidUtils.MainHandler.post(new Runnable() {
+					@Override
+					public void run() {
+						int start=json.indexOf("quick");
+						int end=json.indexOf("exclusive");
+//						boolean a=jpg.("Token")==-1;
+						if(start!=-1&end!=-1) {
+							String jpg=json.substring(start+8,end-3).replace("\\/","/");
+							jsbj.setImageDataSource(jpg.replaceAll("\\/","/"),
+									0, DecodeMode.FIX_XY);
+							jsbj.startImageLoad(false);
+
+						}else{
+							jsbj.setImageDataSource("https://images.i888vip.com/R7iR4GUtiGg4rf0B.jpg",
+									0, DecodeMode.FIX_XY);
+							jsbj.startImageLoad(false);
+						}
+					}
+				});
+			}
+		});
+	}
+
+	private void ensureBackground3(){
+		Request request=new Request.Builder().url("https://api.i888vip.com/swipers/pics?token="+ Config.token).addHeader("accept","application/vnd.zltech.shop.v1+json").get().build();
+		OkHttpClient okHttpClient=new OkHttpClient();
+		okHttpClient.newCall(request).enqueue(new Callback() {
+			@Override
+			public void onFailure(Call call, IOException e) {
+				showToast("没有背景");
+			}
+
+			@Override
+			public void onResponse(Call call, Response response) throws IOException {
+				final  String json=response.body().string();
+				AndroidUtils.MainHandler.post(new Runnable() {
+					@Override
+					public void run() {
+						int start=json.indexOf("exclusive");
+						int end=json.lastIndexOf("jpg");
+//						boolean a=jpg.("Token")==-1;
+						if(start!=-1&end!=-1) {
+							String jpg=json.substring(start+12,end+3).replace("\\/","/");
+							jsbj.setImageDataSource(jpg.replaceAll("\\/","/"),
+									0, DecodeMode.FIX_XY);
+							jsbj.startImageLoad(false);
+
+						}else{
+							jsbj.setImageDataSource("https://images.i888vip.com/R7iR4GUtiGg4rf0B.jpg",
+									0, DecodeMode.FIX_XY);
+							jsbj.startImageLoad(false);
+						}
+
+					}
+				});
+			}
+		});
+	}
+
+
+	private void ensureBackground2(){
+		Request request=new Request.Builder().url("https://api.i888vip.com/swipers/list?token="+ Config.token).addHeader("accept","application/vnd.zltech.shop.v1+json").get().build();
+		OkHttpClient okHttpClient=new OkHttpClient();
+		okHttpClient.newCall(request).enqueue(new Callback() {
+			@Override
+			public void onFailure(Call call, IOException e) {
+				showToast("没有背景");
+			}
+
+			@Override
+			public void onResponse(Call call, Response response) throws IOException {
+				final  String json=response.body().string();
+				AndroidUtils.MainHandler.post(new Runnable() {
+					@Override
+					public void run() {
+						int start=json.indexOf("thumb");
+						int end=json.indexOf("goods_id");
+						if(start!=-1&end!=-1) {
+							String jpg = json.substring(start + 8, end - 3).replace("\\/", "/");
+							jsbg.setImageDataSource(jpg,
+									0, DecodeMode.FIX_XY);
+							jsbg.startImageLoad(false);
+						}else{
+							jsbg.setImageDataSource("https://images.i888vip.com/R7iR4GUtiGg4rf0B.jpg",
+									0, DecodeMode.FIX_XY);
+							jsbg.startImageLoad(false);
+						}
+//						Request request1=new Request.Builder().url(url).build();
+//						OkHttpClient okHttpClient1=new OkHttpClient();
+//						okHttpClient.newCall(request).enqueue(new Callback() {
+//							@Override
+//							public void onFailure(Call call, IOException e) {
+//
+//							}
+//
+//							@Override
+//							public void onResponse(Call call, Response response) throws IOException {
+//								byte[] Picture = response.body().bytes();
+//								//通过imageview，设置图片
+//                                Bitmap bitmap=BitmapFactory.decodeByteArray(Picture, 0, Picture.length);
+//								mLogoImageView.setImageBitmap(BitmapFactory.decodeByteArray(Picture, 0, Picture.length));
+//							}
+//						});
+					}
+				});
+			}
+		});
+	}
+
+
 
 	// @Override
 	// public void onFirstStart()
@@ -401,26 +592,28 @@ public class MainIndexFragment extends BaseFragment
 //		}
 //		if (mShopLogoAndADResponse != null && mShopLogoAndADResponse.data != null
 //				 && jsonArray.get(i).thumb != null) {
-			for (int i=0;i<jsonArray.size();i++) {
+		if(jsonArray!=null) {
+			for (int i = 0; i < jsonArray.size(); i++) {
 //				if (!TextUtils.isEmpty(beans.get(i).goodsid)) {
 //				if (!mShopLogoAndADResponse.data.goodsid.equals("0"))
 //					mPagerAdapter.addItem(new AdvertisementPagerAdapterItem(mShopLogoAndADResponse.data.,
 //							mShopLogoAndADResponse.data.goodsid, mShopLogoAndADResponse.data.tag, true,mShopLogoAndADResponse.data.link));
 //				else
 
-					ImageInfo imageInfo = new ImageInfo();
-					imageInfo.url =beans.get(i).thumb;
-					if(beans.get(i).goodsid!=null){
-						mPagerAdapter.addItem(new AdvertisementPagerAdapterItem(imageInfo,
-								beans.get(i).goodsid, beans.get(i).gcate, beans.get(i).customization,beans.get(i).link));
-					}else{
-						mPagerAdapter.addItem(new AdvertisementPagerAdapterItem(imageInfo,
-								beans.get(i).goodsid, beans.get(i).gcate, beans.get(i).customization));
-					}
+				ImageInfo imageInfo = new ImageInfo();
+				imageInfo.url = beans.get(i).thumb;
+				if (beans.get(i).goodsid != null) {
+					mPagerAdapter.addItem(new AdvertisementPagerAdapterItem(imageInfo,
+							beans.get(i).goodsid, beans.get(i).gcate, beans.get(i).customization, beans.get(i).link));
+				} else {
+					mPagerAdapter.addItem(new AdvertisementPagerAdapterItem(imageInfo,
+							beans.get(i).goodsid, beans.get(i).gcate, beans.get(i).customization));
+				}
 
 
 				length++;
 			}
+		}
 //		}
 
 //		if (mBannerADListResponse != null && mBannerADListResponse.data!= null

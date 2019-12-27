@@ -1,24 +1,24 @@
 package com.shiyou.tryapp2.app.product;
 
-import java.util.List;
-
-import org.apache.http.NameValuePair;
-
 import android.extend.util.AndroidUtils;
 import android.extend.util.ResourceUtil;
 import android.extend.util.ViewTools;
-import android.extend.widget.ExtendWebView;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 
-import com.shiyou.tryapp2.Config;
 import com.shiyou.tryapp2.app.MainActivity;
 import com.shiyou.tryapp2.app.MainFragment;
 import com.shiyou.tryapp2.app.WebViewFragment;
+
+import org.apache.http.NameValuePair;
+
+import java.util.List;
 
 public class MainWebFragment extends WebViewFragment
 {
@@ -27,9 +27,11 @@ public class MainWebFragment extends WebViewFragment
 	private int index;
 	private boolean isFirst;
 	private static long lastClickTime;
+	public ImageView middle_back;
+	private  int ifBack=1;
 
 	public MainWebFragment(String firstUrl, List<NameValuePair> firstRequestPairs,
-			List<NameValuePair> baseRequestPairs, int index)
+						   List<NameValuePair> baseRequestPairs, int index)
 	{
 		super(firstUrl, firstRequestPairs, baseRequestPairs);
 		instance = this;
@@ -42,6 +44,14 @@ public class MainWebFragment extends WebViewFragment
 		super(firstUrl);
 		instance = this;
 		this.index = index;
+	}
+
+	public MainWebFragment(String firstUrl, int index,int ifBack)
+	{
+		super(firstUrl);
+		instance = this;
+		this.index = index;
+		this.ifBack=ifBack;
 	}
 
 	public MainWebFragment(String firstUrl, int index,boolean isFirst)
@@ -62,7 +72,7 @@ public class MainWebFragment extends WebViewFragment
 		ViewTools.adapterAllViewMarginInChildren(view, MainActivity.scaled);
 		ViewTools.adapterAllViewPaddingInChildren(view, MainActivity.scaled);
 		int id = ResourceUtil.getId(getActivity(), "middle_back");
-		View middle_back = view.findViewById(id);
+		middle_back= (ImageView) view.findViewById(id);
 		switch (index)
 		{
 			case 0:
@@ -70,32 +80,58 @@ public class MainWebFragment extends WebViewFragment
 				break;
 			case 1:
 			case 2:
+				middle_back.setVisibility(View.GONE);
+				break;
+			case 3:
 				middle_back.setVisibility(View.VISIBLE);
 				break;
 		}
-
+//		middle_back.setOnClickListener(new View.OnClickListener()
+//		{
+//
+//			@Override
+//			public void onClick(View v)
+//			{
+//				if (AndroidUtils.isFastClick())
+//					return;
+//
+//				if (index == 1)
+//				{
+//					// MainFragment.instance.onBackPressed();
+//					// if (ProductDetailsFragment.instance != null) {
+//					// ProductDetailsFragment.instance.attachUnityPlayer(false);
+//					// }
+//					onBackPressed();
+//					MainFragment.instance.onBackPressed();
+//				}
+//				else if (index == 2)
+//				{
+//					getActivity().onBackPressed();
+//				}
+//			}
+//		});
+		DisplayMetrics metric = new DisplayMetrics();
+		getActivity().getWindowManager().getDefaultDisplay().getMetrics(metric);
+		// 屏幕宽度（像素）
+		int width = metric.widthPixels;
+		// 屏幕高度（像素）
+		int height = metric.heightPixels;
+		FrameLayout.LayoutParams back= new FrameLayout.LayoutParams((int)(width/25+0.5f),(int)(height*3/7/5+0.5f));
+		back.setMargins(0,(int)(height/4+0.5f)-(int)(height*3/7/5+0.5f),0,0);
+		middle_back.setLayoutParams(back);
 		middle_back.setOnClickListener(new View.OnClickListener()
 		{
-
 			@Override
 			public void onClick(View v)
 			{
 				if (AndroidUtils.isFastClick())
 					return;
+				middle_back.setVisibility(View.GONE);
+				MainFragment.instance.getActivity().findViewById(ResourceUtil.getId(getContext(), "fanhui2")).setVisibility(View.GONE);
+				onBackPressed();
+				MainFragment.instance.onBackPressed();
 
-				if (index == 1)
-				{
-					// MainFragment.instance.onBackPressed();
-					// if (ProductDetailsFragment.instance != null) {
-					// ProductDetailsFragment.instance.attachUnityPlayer(false);
-					// }
-					onBackPressed();
-					MainFragment.instance.onBackPressed();
-				}
-				else if (index == 2)
-				{
-					getActivity().onBackPressed();
-				}
+
 			}
 		});
 //		id = ResourceUtil.getId(getActivity(), "test_token");
@@ -110,20 +146,23 @@ public class MainWebFragment extends WebViewFragment
 //		}
 		return view;
 	}
-
-	@Override
-	public boolean onBackPressed()
-	{
-		if (index == 0 && mWebView.canGoBack())
-		{
-			mWebView.goBack();
-			return true;
-		}
-		// if (ProductDetailsFragment.instance != null)
-		// {
-		// ProductDetailsFragment.instance.attachUnityPlayer(false);
-		// }
-		return false;
+	public  ImageView getMiddle_back(){
+		return  middle_back;
 	}
+
+//	@Override
+//	public boolean onBackPressed()
+//	{
+//		if (index == 0 && mWebView.canGoBack())
+//		{
+//			mWebView.goBack();
+//			return true;
+//		}
+//		// if (ProductDetailsFragment.instance != null)
+//		// {
+//		// ProductDetailsFragment.instance.attachUnityPlayer(false);
+//		// }
+//		return false;
+//	}
 
 }

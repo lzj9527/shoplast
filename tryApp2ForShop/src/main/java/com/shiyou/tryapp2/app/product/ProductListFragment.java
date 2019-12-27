@@ -23,6 +23,7 @@ import android.extend.widget.recycler.GridRecyclerView;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -30,6 +31,9 @@ import android.view.View.OnClickListener;
 import android.view.View.OnLayoutChangeListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.shiyou.tryapp2.Config;
@@ -110,25 +114,35 @@ public class ProductListFragment extends BaseFragment
 		ViewTools.adapterAllViewPaddingInChildren(view, MainActivity.scaled);
 		ViewTools.adapterAllTextViewTextSizeInChildren(view, MainActivity.fontScaled);
 		if(category.equals("34")){
-			replace(getActivity(), ResourceUtil.getId(getContext(), "product_list"), new MainWebFragment("http://www.zsa888.com/addons/ewei_shop/template/pad/default/shop/new-emboitementList.html", 0), false);
+			replace(getActivity(), ResourceUtil.getId(getContext(), "product_list"), new MainWebFragment("http://www.zsa888.com/addons/ewei_shop/template/pad/default/shop/new-emboitementList.html", 1), false);
 		}
 		else{
-			replace(getActivity(), ResourceUtil.getId(getContext(), "product_list"), new MainWebFragment("http://www.i888vip.com/addons/ewei_shop/template/pad/default/shop/new-list.html?isSearch=false&sku=''&token="+Config.token+"&goodsType=" + goodstype + "&cid=" + category + "&customization=" + customization, 0), false);
+			replace(getActivity(), ResourceUtil.getId(getContext(), "product_list"), new MainWebFragment("http://www.i888vip.com/addons/ewei_shop/template/pad/default/shop/new-list.html?isSearch=false&sku=''&token="+Config.token+"&goodsType=" + goodstype + "&cid=" + category + "&customization=" + customization, 1), false);
 		}
-		int id = ResourceUtil.getId(getActivity(), "middle_back");
-		View middle_back = view.findViewById(id);
-		middle_back.setOnClickListener(new OnClickListener()
-		{
-			@Override
-			public void onClick(View v)
-			{
-				if (AndroidUtils.isFastClick())
-					return;
-				MainFragment.instance.onBackPressed();
-			}
-		});
+//		int id = ResourceUtil.getId(getActivity(), "middle_back");
+//		View middle_back = view.findViewById(id);
+//		DisplayMetrics metric = new DisplayMetrics();
+//		getActivity().getWindowManager().getDefaultDisplay().getMetrics(metric);
+//		// 屏幕宽度（像素）
+//		int width = metric.widthPixels;
+//		// 屏幕高度（像素）
+//		int height = metric.heightPixels;
+//		LinearLayout.LayoutParams back= new LinearLayout.LayoutParams((int)(width/25+0.5f),(int)(height*3/28+0.5f));
+//		back.setMargins(0,(int)(height/4+0.5f),0,0);
+//		middle_back.setLayoutParams(back);
+//		middle_back.setOnClickListener(new OnClickListener()
+//		{
+//			@Override
+//			public void onClick(View v)
+//			{
+//				if (AndroidUtils.isFastClick())
+//					return;
+//				MainFragment.instance.onBackPressed();
+//
+//			}
+//		});
 
-		id = ResourceUtil.getId(getContext(), "condition_style");
+		int	id = ResourceUtil.getId(getContext(), "condition_style");
 		condition_style = (TextView)view.findViewById(id);
 		condition_style.setOnClickListener(new View.OnClickListener()
 		{

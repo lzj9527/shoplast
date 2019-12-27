@@ -533,7 +533,8 @@
                             android:paddingRight="10px"
                             android:text="18K白金"
                             android:textColor="@color/detail_text_font"
-                            android:textSize="28px" />
+
+                           android:textSize="28px" />
                     </LinearLayout>
 
                     <LinearLayout

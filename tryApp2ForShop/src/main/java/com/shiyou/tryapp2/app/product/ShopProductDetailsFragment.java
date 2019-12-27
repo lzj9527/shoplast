@@ -153,7 +153,7 @@ public class ShopProductDetailsFragment extends BaseFragment
 		int id=ResourceUtil.getId(getContext(),"product_details_attribute");
 		product_attribute= (FragmentContainer) mDetailRightLayout.findViewById(id);
 
-		replace(getActivity(),ResourceUtil.getId(getContext(),"product_details_attribute"),new MainWebFragment(url,0),false);
+		replace(getActivity(),ResourceUtil.getId(getContext(),"product_details_attribute"),new MainWebFragment(url,1),false);
 
 		ViewTools.adapterAllViewMarginInChildren(mDetailRightLayout, MainActivity.scaled);
 		ViewTools.adapterAllViewPaddingInChildren(mDetailRightLayout, MainActivity.scaled);

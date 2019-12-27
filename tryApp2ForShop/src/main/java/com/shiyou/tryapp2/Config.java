@@ -19,6 +19,7 @@ public class Config
 	public static final String BaseInterface="https://api.i888vip.com";
 	public static final String BaseWebUrl = "file:///android_asset";// Web页面BaseUrl
 	// public static final String BaseWebUrl = "http://weixintest.tryapp.cn/addons/ewei_shop/template";
+	public static String goodurl;
 
 	public static final String LoginUrl = BaseUrl + "/app/index.php?i=2&c=entry&do=login&m=test&id=2";// &uname=shop&pwd=111111&IMEI=1234456";
 

@@ -67,23 +67,28 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|center_vertical"
                 android:padding="40px"
+
                 android:src="@drawable/arrow_right"
                 android:visibility="invisible" />
         </FrameLayout>
-
-        <ImageView
+        <LinearLayout
             android:id="@+id/middle_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="40px"
-            android:src="@drawable/btn_back" />
+            android:layout_width="0dp"
 
+            android:background="#E8F5E9"
+            android:layout_height="0dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:src="@drawable/fanhui" />
+        </LinearLayout>
         <ImageView
             android:id="@+id/product_details_tryon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_alignTop="@id/middle_back"
             android:layout_marginRight="20px"
             android:layout_marginTop="20px"
             android:padding="20px"
@@ -144,6 +149,14 @@
                 </android.extend.widget.MenuView>
             </LinearLayout>
         </android.extend.widget.MenuBar>
+        <ImageView
+        android:id="@+id/product_details_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/product_details_3d"
+        android:layout_toLeftOf="@id/product_details_3d"
+        android:padding="20px"
+        android:src="@drawable/selector_product_details_photo" />
     </RelativeLayout>
     <LinearLayout
         android:id="@+id/photo_show"
