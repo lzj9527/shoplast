@@ -28,11 +28,19 @@
         android:layout_marginTop="30px"
         android:orientation="vertical" >
 
-        <android.extend.widget.ExtendImageView
-            android:id="@+id/homepage_button"
+        <ImageView
+            android:id="@+id/product_details_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
+            android:src="@drawable/product_details_button" />
+
+        <android.extend.widget.ExtendImageView
+            android:id="@+id/homepage_button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
             android:src="@drawable/homepage_button" />
     </LinearLayout>
 
@@ -193,21 +201,14 @@
         </LinearLayout>
     </FrameLayout>
 
-    <ImageView
-        android:id="@+id/product_details_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/min_hand_layout"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="60px"
-        android:src="@drawable/product_details_button" />
 
     <ImageView
         android:id="@+id/camera_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/product_details_button"
-        android:layout_alignLeft="@id/product_details_button"
+        android:layout_above="@id/min_hand_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="60px"
         android:layout_marginBottom="30px"
         android:src="@drawable/tryon_camera_btn" />
 
@@ -217,6 +218,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_marginRight="60px"
+        android:visibility="gone"
         android:layout_marginTop="30px" >
 
         <LinearLayout

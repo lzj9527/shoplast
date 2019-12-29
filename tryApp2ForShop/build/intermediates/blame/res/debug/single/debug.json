@@ -12,12 +12,12 @@
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\tryon_category_ring.png"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_left.xml.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\androidExtendLib2\\build\\intermediates\\packaged_res\\debug\\anim\\slide_in_left.xml"
-    },
-    {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\layout_product_details_right_layout.xml.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\layout\\product_details_right_layout.xml"
+    },
+    {
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\anim_slide_in_left.xml.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\androidExtendLib2\\build\\intermediates\\packaged_res\\debug\\anim\\slide_in_left.xml"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tryon_category_necklace_s.png.flat",
@@ -36,32 +36,32 @@
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable\\selector_product_details_photo.xml"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable_shape_main_menubar_badge_bg.xml.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable\\shape_main_menubar_badge_bg.xml"
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tryon_category_bracelet_s.png.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\tryon_category_bracelet_s.png"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_product_details_3d_kwhite_s.png.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\product_details_3d_kwhite_s.png"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tryon_category_bracelet_s.png.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\tryon_category_bracelet_s.png"
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable_shape_main_menubar_badge_bg.xml.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable\\shape_main_menubar_badge_bg.xml"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_btn_gallery.png.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xxhdpi\\btn_gallery.png"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_min_hand_sample3.png.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xxhdpi\\min_hand_sample3.png"
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_main_set_s.png.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\main_set_s.png"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable_train.png.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable\\train.png"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_main_set_s.png.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\main_set_s.png"
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_min_hand_sample3.png.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xxhdpi\\min_hand_sample3.png"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\anim_shrink_fade_out.xml.flat",
@@ -72,16 +72,16 @@
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\main_shoppingcart.png"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\layout_couple_rings_details_right_select_layout.xml.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\layout\\couple_rings_details_right_select_layout.xml"
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_product_details_tryon.png.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xxhdpi\\product_details_tryon.png"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_main_order2.png.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\main_order2.png"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_product_details_tryon.png.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xxhdpi\\product_details_tryon.png"
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\layout_couple_rings_details_right_select_layout.xml.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\layout\\couple_rings_details_right_select_layout.xml"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable_selector_min_hand_sample2.xml.flat",
@@ -104,12 +104,12 @@
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\androidExtendLib2\\build\\intermediates\\packaged_res\\debug\\layout\\default_tab_content.xml"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\layout_product_details_selectprice.xml.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\layout\\product_details_selectprice.xml"
-    },
-    {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\layout_product_historylist_item.xml.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\layout\\product_historylist_item.xml"
+    },
+    {
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\layout_product_details_selectprice.xml.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\layout\\product_details_selectprice.xml"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_tryon_category_couplering.png.flat",
@@ -144,12 +144,12 @@
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\androidExtendLib2\\build\\intermediates\\packaged_res\\debug\\layout\\default_tab_frame_content.xml"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_main_history_s.png.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xxhdpi\\main_history_s.png"
-    },
-    {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_min_hand_two_sample5.png.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xxhdpi\\min_hand_two_sample5.png"
+    },
+    {
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_main_history_s.png.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xxhdpi\\main_history_s.png"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\layout_product_list_layout.xml.flat",
@@ -224,12 +224,12 @@
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\menring.png"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tryon_erase_edit.png.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\tryon_erase_edit.png"
-    },
-    {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_product_details_selectprice_bg.9.png.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xxhdpi\\product_details_selectprice_bg.9.png"
+    },
+    {
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_tryon_erase_edit.png.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\tryon_erase_edit.png"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_setting.png.flat",
@@ -384,24 +384,24 @@
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable\\setting.png"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_anim_loading.png.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\anim_loading.png"
-    },
-    {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_arrow_left.png.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\arrow_left.png"
+    },
+    {
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_anim_loading.png.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\anim_loading.png"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_main_search_s.png.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\main_search_s.png"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_main_others.png.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\main_others.png"
-    },
-    {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_kelajie.png.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\kelajie.png"
+    },
+    {
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_main_others.png.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\main_others.png"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_product_details_select_item_bg.9.png.flat",
@@ -484,12 +484,12 @@
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\product_details_3d_kred.png"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_rotate_refresh.png.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\androidExtendLib2\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\rotate_refresh.png"
-    },
-    {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_jpush_richpush_btn_selector.xml.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\jPushSDK300\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\jpush_richpush_btn_selector.xml"
+    },
+    {
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_rotate_refresh.png.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\androidExtendLib2\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\rotate_refresh.png"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_min_hand_two_sample4_s.png.flat",
@@ -548,12 +548,12 @@
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xhdpi\\min_hand_man_sample4.png"
     },
     {
-        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_min_hand_sample1_s.png.flat",
-        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xxhdpi\\min_hand_sample1_s.png"
-    },
-    {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\layout_default_frame_layout.xml.flat",
         "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\androidExtendLib2\\build\\intermediates\\packaged_res\\debug\\layout\\default_frame_layout.xml"
+    },
+    {
+        "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_min_hand_sample1_s.png.flat",
+        "source": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\src\\main\\res\\drawable-xxhdpi\\min_hand_sample1_s.png"
     },
     {
         "merged": "D:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_jpush_ic_richpush_actionbar_divider.png.flat",

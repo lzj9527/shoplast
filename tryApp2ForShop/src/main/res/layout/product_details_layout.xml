@@ -8,25 +8,27 @@
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <android.extend.widget.ExtendLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.extend.widget.ExtendLinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@color/detail_edittext_hint"
         android:orientation="horizontal" >
-    <include
-        android:id="@+id/details_middle_layout"
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:layout_weight="7"
-        layout="@layout/product_details_middle_layout"
-        android:background="@color/detail_edittext_hint"
 
-        android:visibility="visible" />
-    <include
+        <include
+            android:id="@+id/details_middle_layout"
+            layout="@layout/product_details_middle_layout"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:background="@color/detail_edittext_hint"
+
+            android:visibility="visible" />
+
+        <include
         android:id="@+id/details_right_layout"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
-        android:layout_weight="3"
+        android:layout_weight="2"
         layout="@layout/product_details_right_layout"
         android:background="@color/detail_edittext_hint"
         android:visibility="visible"></include>

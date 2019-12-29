@@ -333,7 +333,6 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 		fragmentC6 = mProductDetails.findViewById(fragmentC6ID);
 
 
-
 		Log.d(TAG, "onCreateView: mDetailRight="+mDetailRightLayout);
 		Log.d(TAG, "onCreateView: mCoupleRight="+mCoupleRightLayout);
 
@@ -347,6 +346,10 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 
 		loadProductDetailsData();
 //		replace(instance,ResourceUtil.getId(getContext(),"product_details_attribute"),new MainWebFragment(url,0),false);
+		set3DShow(false);
+		if(product_details_3d.getVisibility()==View.GONE){
+			product_details_photo.setVisibility(View.GONE);
+		}
 		return mProductDetails;
 	}
 
@@ -848,10 +851,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 //		 hide3DLoadingIndicator();
 		MainActivity.instance.addModelLoadListener(this);
 
-		if ( hasModelInfo)
-			set3DShow(true);
-		else
-			set3DShow(false);
+
 	}
 
 	public void dotest(){
@@ -1175,6 +1175,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 		if (datas.model_infos == null)
 		{
 //			showToast("没有模型");
+			product_details_photo.setVisibility(View.GONE);
 			product_details_tryon.setVisibility(View.GONE);
 			product_details_3d.setVisibility(View.GONE);
 			product_photo.setVisibility(View.VISIBLE);
@@ -1209,6 +1210,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 			}
 			else
 			{
+				product_details_photo.setVisibility(View.GONE);
 				showToast("没有男戒模型");
 				hideLoadingIndicator();
 				return;
@@ -1223,6 +1225,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 			}
 			else
 			{
+				product_details_photo.setVisibility(View.GONE);
 				showToast("没有女戒模型");
 				hideLoadingIndicator();
 				return;
@@ -1238,6 +1241,7 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 		if (detail.model_info == null)
 		{
 //			showToast("没有模型");
+			product_details_photo.setVisibility(View.GONE);
 			product_details_3d.setVisibility(View.GONE);
 			product_details_tryon.setVisibility(View.GONE);
 			product_photo.setVisibility(View.VISIBLE);
@@ -1376,7 +1380,8 @@ public class ProductDetailsFragment extends BaseFragment implements OnModelLoadL
 			public void run()
 			{
 				// material_menubar.setCurrentMenu(0);
-				product_details_3d.setCurrentMenu(0);
+//				product_details_3d.setCurrentMenu(0);
+				set3DShow(false);
 			}
 		});
 	}

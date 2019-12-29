@@ -1,4 +1,4 @@
-#Fri Dec 27 14:29:40 CST 2019
+#Sun Dec 29 04:25:04 CST 2019
 base.0=D\:\\Shop-661cfdda067b4a872eeb38c2b597c33402a86ad9\\tryApp2ForShop\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
